@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/parentcontainer"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/relativeLayout_title" >
+
+        <TextView
+            style="@style/relativeLayout_title_textView"
+            android:text="@string/percenter" />
+
+        <TextView
+            android:id="@+id/txt_enter"
+            style="@style/relativeLayout_title_rightTextView"
+            android:text="@string/infinish"
+            android:textSize="@dimen/DIMEN_32PX" />
+
+        <TextView
+            style="@style/relativeLayout_title_leftTextView"
+            android:padding="@dimen/DIMEN_20PX" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/DIMEN_326PX" >
+
+        <ImageView
+            android:id="@+id/txt_backg"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/img_default"
+            android:scaleType="fitStart" />
+
+        <com.ncwcandroid.ui.widget.CircularImage
+            android:id="@+id/set_img"
+            android:layout_width="@dimen/DIMEN_168PX"
+            android:layout_height="@dimen/DIMEN_168PX"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/DIMEN_10PX"
+            android:layout_marginTop="@dimen/DIMEN_10PX"
+            android:scaleType="centerCrop" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/set_username"
+        style="@style/horizontal_preference_single_item"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/set_context"
+            android:text="@string/nickname" />
+
+        <EditText
+            android:id="@+id/edt_nickname"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/DIMEN_20PX"
+            android:background="@color/white"
+            android:gravity="center_vertical|right"
+            android:hint="@string/modifnickname"
+            android:paddingRight="@dimen/DIMEN_36PX"
+            android:singleLine="true"
+            android:textSize="@dimen/DIMEN_32PX" />
+    </LinearLayout>
+
+    <View style="@style/relativeLayout_item_lineView" />
+
+    <RelativeLayout
+        android:id="@+id/set_moblie"
+        style="@style/horizontal_preference_single_item"
+        android:descendantFocusability="blocksDescendants" >
+
+        <TextView
+            style="@style/set_context"
+            android:text="@string/mobli" />
+
+        <TextView
+            android:id="@+id/txt_mobile"
+            style="@style/set_contextright"
+            android:hint="@string/modifymoile"
+            android:paddingLeft="@dimen/DIMEN_20PX" />
+    </RelativeLayout>
+
+    <View style="@style/relativeLayout_item_lineView" />
+
+    <RelativeLayout
+        android:id="@+id/set_email"
+        style="@style/horizontal_preference_single_item"
+        android:descendantFocusability="blocksDescendants" >
+
+        <TextView
+            style="@style/set_context"
+            android:text="@string/binemail" />
+
+        <TextView
+            android:id="@+id/txt_email"
+            style="@style/set_contextright"
+            android:hint="@string/exampleeamil" />
+    </RelativeLayout>
+
+    <View style="@style/relativeLayout_item_lineView" />
+
+    <RelativeLayout
+        android:id="@+id/set_sex"
+        style="@style/horizontal_preference_single_item"
+        android:descendantFocusability="blocksDescendants" >
+
+        <TextView
+            style="@style/set_context"
+            android:text="@string/sex" />
+
+        <TextView
+            android:id="@+id/txt_sex"
+            style="@style/set_contextright"
+            android:gravity="right|center"
+            android:hint="@string/examplesex" />
+    </RelativeLayout>
+
+    <View style="@style/relativeLayout_item_lineView" />
+
+    <RelativeLayout
+        android:id="@+id/set_ads"
+        style="@style/horizontal_preference_single_item"
+        android:descendantFocusability="blocksDescendants" >
+
+        <TextView
+            android:id="@+id/txt_left"
+            style="@style/set_context"
+            android:focusable="false"
+            android:text="@string/adsmanagement" />
+
+        <TextView
+            android:id="@+id/txt_ads"
+            style="@style/set_contextright"
+            android:layout_toRightOf="@id/txt_left"
+            android:ellipsize="end"
+            android:hint="@string/exampleads"
+            android:paddingLeft="@dimen/DIMEN_20PX"
+            android:singleLine="true" />
+    </RelativeLayout>
+
+    <View style="@style/relativeLayout_item_lineView" />
+
+    <RelativeLayout
+        android:id="@+id/set_psw"
+        style="@style/horizontal_preference_single_item"
+        android:descendantFocusability="blocksDescendants" >
+
+        <TextView
+            style="@style/set_context"
+            android:text="@string/pwdservice" />
+
+        <TextView
+            android:id="@+id/txt_psw"
+            style="@style/set_contextright" />
+    </RelativeLayout>
+
+    <View style="@style/relativeLayout_item_lineView" />
+
+    <Button
+        android:id="@+id/txt_finish"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/DIMEN_90PX"
+        android:layout_marginTop="@dimen/DIMEN_20PX"
+        android:background="@drawable/finishappsharp"
+        android:gravity="center"
+        android:text="@string/finishapp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/DIMEN_36PX" />
+
+</LinearLayout>

@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/parentcontainer"
+    android:background="@color/bg_color"
+    android:gravity="center" >
+
+    <RelativeLayout
+        android:id="@+id/fong_fove"
+        style="@style/relativeLayout_title" >
+
+        <TextView
+            android:id="@+id/tv_wqhg_title"
+            style="@style/relativeLayout_title"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/app_name"
+            android:gravity="center"
+            android:text="@string/tab_shopping"
+            android:textColor="@color/white"
+            android:textSize="@dimen/DIMEN_36PX" />
+
+        <ImageView
+            android:id="@+id/res_new"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/repeat" />
+    </RelativeLayout>
+
+    <!-- 垂直滚动视图 -->
+
+    <com.ncwcandroid.ui.widget.ScrollViewExtend
+        android:id="@+id/sv_wqhg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/fong_fove"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/bg_color"
+        android:scrollbars="none" >
+
+        <!-- 按钮组布局 -->
+
+        <LinearLayout
+            android:id="@+id/layout_linear_product"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <!-- 左栏按钮布局 -->
+
+            <LinearLayout
+                android:id="@+id/layout_linear_l"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="top|left"
+                android:orientation="vertical" >
+            </LinearLayout>
+            <!-- 左栏按钮布局结束 -->
+            <!-- 右栏按钮布局 -->
+
+            <LinearLayout
+                android:id="@+id/layout_linear_r"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="top|right"
+                android:orientation="vertical" >
+            </LinearLayout>
+            <!-- 右栏按钮布局结束 -->
+        </LinearLayout>
+        <!-- 按钮组布局结束 -->
+    </com.ncwcandroid.ui.widget.ScrollViewExtend>
+    <!-- 垂直滚动视图结束 -->
+
+</RelativeLayout>

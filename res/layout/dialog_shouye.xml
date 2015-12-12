@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="120dp"
+        android:layout_marginTop="140dp"
+        android:background="@drawable/corners_share_bg" >
+
+        <ImageView
+            android:id="@+id/img_dialog_shouye"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/cup" />
+
+        <TextView
+            android:id="@+id/tv_dialog_shouye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/img_dialog_shouye"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@+id/img_dialog_shouye"
+            android:text="我们在审核免费试用用户的时候会考虑这些:"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_dialog_shouye"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:text="1.活跃在微博微信以及连续参加活动的用户\n\n2.有提交过详细精美的试用报告者\n\n3.提出有价值建议反馈和创意的用户"
+            android:textColor="@color/Red"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/nowei"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignLeft="@+id/textView1"
+            android:layout_below="@+id/textView1"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/weixuanzhong" />
+
+        <TextView
+            android:id="@+id/suiyiyiyi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/nowei"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@+id/nowei"
+            android:text="以后不再提示"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/btn_dialog_shouye"
+            style="@style/Btn_entenrTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/suiyiyiyi"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="23dp"
+            android:text="@string/enter" />
+    </RelativeLayout>
+
+</RelativeLayout>

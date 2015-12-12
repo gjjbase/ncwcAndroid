@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <View
+        style="@style/relativeLayout_item_lineView"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/tv_info_pinglun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:padding="@dimen/DIMEN_20PX"
+        android:text="小提示：积极参与试用活动与反馈用户体验，即可提高免费试用的成功率！"
+        android:textColor="@color/orange"
+        android:textSize="@dimen/DIMEN_25PX" />
+
+    <EditText
+        android:id="@+id/et_write_pinglun"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btn_send_pinglun"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_info_pinglun"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="4dp"
+        android:layout_toLeftOf="@+id/btn_send_pinglun"
+        android:background="@drawable/bg_edittext"
+        android:gravity="left|top"
+        android:hint="请您写下想说的话……(最多七十字)"
+        android:lines="4"
+        android:maxLength="70"
+        android:padding="@dimen/DIMEN_20PX"
+        android:singleLine="false"
+        android:textSize="14sp" >
+    </EditText>
+
+    <Button
+        android:id="@+id/btn_send_pinglun"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_info_pinglun"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/fabiao" />
+
+    <com.ncwcandroid.ui.widget.AllListView
+        android:id="@+id/lv_show_pinglun"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_write_pinglun"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="4dp"
+        android:divider="@null"
+         />
+
+    <TextView
+        android:id="@+id/refrush_listview"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/lv_show_pinglun"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:text="点击加载"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+</RelativeLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        style="@style/relativeLayout_title" >
+
+        <ImageButton
+            android:id="@+id/imgbtn_back"
+            android:layout_width="13dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/back" />
+
+        <TextView
+            style="@style/relativeLayout_title_textView"
+            android:text="@string/zhongjiangMD" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_zjmd"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_title"
+        android:background="@color/bg_color"
+        android:divider="@android:color/transparent"
+        android:listSelector="@drawable/list_item_wangqi" >
+    </ListView>
+
+</RelativeLayout>

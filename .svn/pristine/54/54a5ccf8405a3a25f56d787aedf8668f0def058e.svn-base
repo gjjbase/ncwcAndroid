@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/page_back"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/relativeLayout_title" >
+
+        <TextView
+            style="@style/relativeLayout_title_leftTextView"
+            android:text="@string/back" />
+
+        <TextView
+            style="@style/relativeLayout_title_textView"
+            android:text="@string/login" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:hint="@string/name"
+            android:padding="10dp" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:hint="@string/pass"
+            android:padding="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/login" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tpl_sign_up" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tvWeixin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
+            android:background="@color/bgtitlecolor"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/login_with_weixin"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/tvWeibo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
+            android:background="@color/bgtitlecolor"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/login_with_sina_weibo"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/Qq"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
+            android:background="@color/bgtitlecolor"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/login_with_qq"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/fx"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="分享" />
+
+</LinearLayout>

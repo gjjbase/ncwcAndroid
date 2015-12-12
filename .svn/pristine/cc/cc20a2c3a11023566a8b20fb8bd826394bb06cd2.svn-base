@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:id="@+id/rel_left"
+        android:layout_height="50dp"
+        android:layout_weight="1" >
+
+        <com.ncwcandroid.ui.widget.CircularImage
+            android:id="@+id/img_wangqi_user_l"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40dp"
+            android:src="@drawable/yonghu_moren" />
+
+        <TextView
+            android:id="@+id/tv_wangqi_username_l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/img_wangqi_user_l"
+            android:padding="2dp"
+            android:textColor="#ff8f00" />
+
+        <View
+            style="@style/relativeLayout_item_lineView"
+            android:layout_height="1.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="40dp"
+            android:background="@color/white89" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_rigt"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_weight="1" >
+
+        <com.ncwcandroid.ui.widget.CircularImage
+            android:id="@+id/img_wangqi_user_r"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/img_default" />
+
+        <TextView
+            android:id="@+id/tv_wangqi_username_r"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@+id/img_wangqi_user_r"
+            android:padding="2dp"
+            android:textColor="#ff8f00" />
+
+        <View
+            style="@style/relativeLayout_item_lineView"
+            android:layout_height="1.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/white89" />
+    </RelativeLayout>
+
+</LinearLayout>

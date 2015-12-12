@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/parentcontainer"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/relativeLayout_title" >
+
+        <TextView
+            style="@style/relativeLayout_title_textView"
+            android:text="@string/adsmanagement" />
+
+        <ImageView
+            android:id="@+id/add_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:padding="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/DIMEN_36PX"
+            android:src="@drawable/img_add" />
+
+        <TextView style="@style/relativeLayout_title_leftTextView" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/list_ads"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@null"
+        android:dividerHeight="@null"
+        android:fadingEdge="none"
+        android:listSelector="@null" />
+
+</LinearLayout>

@@ -1,0 +1,187 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="@dimen/DIMEN_20PX"
+        android:layout_marginRight="@dimen/DIMEN_20PX"
+        android:layout_marginTop="@dimen/DIMEN_20PX"
+        android:background="@color/white" >
+
+        <ImageView
+            android:id="@+id/img_product"
+            android:layout_width="170dp"
+            android:layout_height="170dip"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_default" />
+
+        <TextView
+            android:id="@+id/tv_free01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="65dp"
+            android:layout_toRightOf="@id/img_product"
+            android:text="免费提供:"
+            android:textSize="@dimen/DIMEN_22PX" />
+
+        <TextView
+            android:id="@+id/tv_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_free01"
+            android:layout_alignBottom="@+id/tv_free01"
+            android:layout_marginLeft="1dip"
+            android:layout_toRightOf="@id/tv_free01"
+            android:text="200"
+            android:textColor="@color/Red"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_nono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_free01"
+            android:layout_marginLeft="1dip"
+            android:layout_marginTop="9dp"
+            android:layout_toRightOf="@id/tv_num"
+            android:text="份"
+            android:textSize="@dimen/DIMEN_20PX" />
+
+        <TextView
+            android:id="@+id/tv_free02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tv_free02"
+            android:layout_alignLeft="@+id/tv_free01"
+            android:layout_below="@+id/tv_free01"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@+id/tv_nono"
+            android:text="参与人数:"
+            android:textSize="@dimen/DIMEN_22PX" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="68dp"
+            android:singleLine="true"
+            android:text="价格:￥30"
+            android:textSize="@dimen/DIMEN_22PX" />
+
+        <TextView
+            android:id="@+id/tv_persons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_free02"
+            android:layout_alignBottom="@+id/tv_free02"
+            android:layout_marginLeft="1dp"
+            android:layout_toRightOf="@+id/tv_free02"
+            android:gravity="center"
+            android:text="1534"
+            android:textColor="@color/Red"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_free02"
+            android:layout_alignBottom="@+id/tv_free02"
+            android:layout_marginLeft="1dp"
+            android:layout_toRightOf="@+id/tv_persons"
+            android:text="人"
+            android:textSize="@dimen/DIMEN_22PX" />
+
+        <ImageView
+            android:id="@+id/img_title"
+            android:layout_width="34dip"
+            android:layout_height="34dip"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/qibiao" />
+
+        <TextView
+            android:id="@+id/tv_product_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_product_title"
+            android:layout_below="@+id/tv_product_title"
+            android:ellipsize="end"
+            android:lines="2"
+            android:paddingBottom="3dp"
+            android:text="产品简介产品简介产品简介产品简介产品简介产品简介产品简介产品简介产品简介"
+            android:textSize="@dimen/DIMEN_22PX" />
+
+        <TextView
+            android:id="@+id/tv_product_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_free01"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="产品名称"
+            android:textSize="@dimen/DIMEN_30PX" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="160dip"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@+id/img_product"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@id/img_product"
+            android:background="@drawable/corners_button_bg"
+            android:gravity="center"
+            android:text="免费试用"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/img_time"
+            android:layout_width="14dip"
+            android:layout_height="14dip"
+            android:layout_above="@+id/button1"
+            android:layout_alignLeft="@+id/tv_product_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="3dp"
+            android:src="@drawable/xiaobiao" />
+
+        <TextView
+            android:id="@+id/timer_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/img_time"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@+id/img_time"
+            android:text="剩余时间"
+            android:textColor="#ff0000"
+            android:textSize="@dimen/DIMEN_22PX" />
+
+        <TextView
+            android:id="@+id/tv_qi_num"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="6.5dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

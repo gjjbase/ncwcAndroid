@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/horizontal_preference_single_item" >
+
+    <ImageView
+        android:id="@+id/img_user"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/yonghu_moren" />
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/img_user"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/img_user"
+        android:ellipsize="end"
+        android:maxEms="8"
+        android:singleLine="true"
+        android:textColor="#ff8f00"
+        android:textSize="@dimen/DIMEN_34PX" />
+
+    <TextView
+        android:id="@+id/tv_pinglu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/img_user"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="4dp"
+        android:paddingLeft="@dimen/DIMEN_20PX"
+        android:paddingRight="10dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/DIMEN_28PX" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_pinglu"
+        android:layout_alignLeft="@+id/img_time"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="9dp"
+        android:text="时间"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/img_time"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_above="@+id/tv_pinglu"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="200dp"
+        android:layout_toRightOf="@+id/img_user"
+        android:src="@drawable/clock" />
+
+    <View
+        style="@style/relativeLayout_item_lineView"
+        android:layout_height="1.5dp"
+        android:layout_below="@id/tv_pinglu"
+        android:layout_marginTop="5dp" />
+
+</RelativeLayout>

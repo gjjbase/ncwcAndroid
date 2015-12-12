@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/parentcontainer"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/relativeLayout_title" >
+
+        <TextView
+            style="@style/relativeLayout_title_textView"
+            android:text="@string/agreement" />
+
+        <TextView style="@style/relativeLayout_title_leftTextView" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="@dimen/DIMEN_20PX"
+        android:background="@drawable/loginedt_shape" >
+
+        <WebView
+            android:id="@+id/wb_agment"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scrollbars="none"
+            android:layout_marginBottom="@dimen/DIMEN_90PX"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="2dp" />
+
+        <TextView
+            android:id="@+id/login"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/DIMEN_90PX"
+            android:layout_gravity="bottom"
+            android:background="@drawable/logintxt_shape"
+            android:gravity="center"
+            android:text="@string/enter"
+            android:textColor="@color/white"
+            android:textSize="@dimen/DIMEN_36PX" />
+    </FrameLayout>
+
+</LinearLayout>

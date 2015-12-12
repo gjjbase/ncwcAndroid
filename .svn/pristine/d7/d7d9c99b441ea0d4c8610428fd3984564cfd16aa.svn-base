@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/share_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_color" >
+
+    <RelativeLayout
+        android:id="@+id/rl_u_u"
+        style="@style/relativeLayout_title" >
+
+        <TextView
+            style="@style/relativeLayout_title_textView"
+            android:text="@string/product_info" />
+
+        <TextView style="@style/relativeLayout_title_leftTextView" 
+            android:onClick="back"/>
+
+        <ImageView
+            android:id="@+id/img_share_xiangqing"
+            android:layout_width="20dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/share" />
+    </RelativeLayout>
+
+    <com.ncwcandroid.ui.widget.ScrollViewExtend
+        android:id="@+id/scroll_extend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_u_u" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rela"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white" >
+
+                <ImageView
+                    android:id="@+id/img_product_"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_default" />
+
+                <TextView
+                    android:id="@+id/tv_free01_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="65dp"
+                    android:layout_toRightOf="@id/img_product_"
+                    android:text="免费提供:"
+                    android:textSize="@dimen/DIMEN_22PX" />
+
+                <TextView
+                    android:id="@+id/tv_num_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tv_free01_"
+                    android:layout_alignBottom="@+id/tv_free01_"
+                    android:layout_marginLeft="1dip"
+                    android:layout_toRightOf="@id/tv_free01_"
+                    android:text="200"
+                    android:textColor="@color/Red"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_nono_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tv_free01_"
+                    android:layout_marginLeft="1dip"
+                    android:layout_marginTop="9dp"
+                    android:layout_toRightOf="@id/tv_num_"
+                    android:text="份"
+                    android:textSize="@dimen/DIMEN_22PX" />
+
+                <TextView
+                    android:id="@+id/tv_free02_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/tv_free01_"
+                    android:layout_below="@id/tv_free01_"
+                    android:layout_marginTop="3dp"
+                    android:layout_toRightOf="@+id/tv_nono_"
+                    android:text="参与人数:"
+                    android:textSize="@dimen/DIMEN_22PX" />
+
+                <TextView
+                    android:id="@+id/tv_persons_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tv_free02_"
+                    android:layout_alignBottom="@+id/tv_free02_"
+                    android:layout_marginLeft="1dp"
+                    android:layout_toRightOf="@+id/tv_free02_"
+                    android:text="1534"
+                    android:textColor="@color/Red"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_no_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tv_free02_"
+                    android:layout_alignBottom="@+id/tv_free02_"
+                    android:layout_marginLeft="1dp"
+                    android:layout_toRightOf="@+id/tv_persons_"
+                    android:text="人"
+                    android:textSize="@dimen/DIMEN_22PX" />
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginTop="68dp"
+                    android:text="价格:￥30"
+                    android:textSize="@dimen/DIMEN_22PX" />
+
+                <ImageView
+                    android:id="@+id/img_title_"
+                    android:layout_width="34dip"
+                    android:layout_height="34dip"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/qibiao" />
+
+                <TextView
+                    android:id="@+id/tv_product_content_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tv_product_title_"
+                    android:layout_below="@+id/tv_product_title_"
+                    android:ellipsize="end"
+                    android:lines="2"
+                    android:text="产品简介产品简介产品简介产品简介产品简介产品简介产品简介产品简介产品简介"
+                    android:textSize="@dimen/DIMEN_22PX" />
+
+                <TextView
+                    android:id="@+id/tv_product_title_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/img_product_"
+                    android:text="产品名称"
+                    android:textSize="@dimen/DIMEN_30PX" />
+
+                <Button
+                    android:id="@+id/button1_"
+                    android:layout_width="160dip"
+                    android:layout_height="40dp"
+                    android:layout_alignBottom="@+id/img_product_"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dip"
+                    android:layout_marginRight="20dp"
+                    android:layout_toRightOf="@id/img_product_"
+                    android:background="@drawable/corners_button_bg"
+                    android:text="免费试用"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/img_time_"
+                    android:layout_width="14dip"
+                    android:layout_height="14dip"
+                    android:layout_above="@+id/button1_"
+                    android:layout_alignLeft="@+id/tv_product_content_"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/xiaobiao" />
+
+                <com.ncwcandroid.ui.widget.TimerTextView
+                    android:id="@+id/timer_text_view_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/img_time_"
+                    android:layout_marginLeft="4dp"
+                    android:layout_toRightOf="@+id/img_time_"
+                    android:text="剩余时间"
+                    android:textColor="#ff0000"
+                    android:textSize="@dimen/DIMEN_22PX" />
+
+                <TextView
+                    android:id="@+id/tv_qi_num_"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="6.5dp"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:text="010"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/DIMEN_22PX" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/Rl_change"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <android.support.v4.app.FragmentTabHost
+                    android:id="@android:id/tabhost"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white" >
+
+                    <FrameLayout
+                        android:id="@android:id/tabcontent"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="0" />
+                </android.support.v4.app.FragmentTabHost>
+
+                <View style="@style/relativeLayout_item_lineView" />
+
+                <FrameLayout
+                    android:id="@+id/realtabcontent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    android:background="@color/bg_color" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.ncwcandroid.ui.widget.ScrollViewExtend>
+
+</RelativeLayout>

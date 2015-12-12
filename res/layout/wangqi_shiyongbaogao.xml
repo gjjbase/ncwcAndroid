@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
+
+    <RelativeLayout
+        android:id="@+id/rl_2"
+        style="@style/relativeLayout_title" >
+
+        <ImageView
+            android:id="@+id/img_back_03"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:padding="@dimen/DIMEN_20PX"
+            android:src="@drawable/fanhui" />
+
+        <TextView
+            style="@style/relativeLayout_title_textView"
+            android:text="@string/shiyongbaogao" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_2" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/img_sybaogao"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="23dp"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/tv_sybaogao_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/img_sybaogao"
+                android:layout_marginLeft="28dp"
+                android:layout_toRightOf="@+id/img_sybaogao"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_sybaogao_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/img_sybaogao"
+                android:layout_alignLeft="@+id/tv_sybaogao_title"
+                android:layout_alignRight="@+id/img_sybaogao_camera"
+                android:textSize="@dimen/DIMEN_32PX" />
+
+            <View
+                android:id="@+id/img_nononoway"
+                style="@style/relativeLayout_item_lineView"
+                android:layout_height="2dp"
+                android:layout_below="@+id/tv_sybaogao_info"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/tv_sybaogao_tishi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/img_nononoway"
+                android:layout_below="@+id/img_nononoway"
+                android:layout_marginLeft="@dimen/DIMEN_20PX"
+                android:layout_marginTop="2dp"
+                android:drawableLeft="@drawable/dengpao"
+                android:gravity="center"
+                android:text="提示：试用报告请认真填写，人工审核通过后获得积分。"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/DIMEN_20PX" />
+
+            <TextView
+                android:id="@+id/tv_sybaogao_waiguan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tv_sybaogao_tishi"
+                android:layout_below="@+id/tv_sybaogao_tishi"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/waiguang"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:text="产品外观"
+                android:textSize="@dimen/DIMEN_32PX" />
+
+            <EditText
+                android:id="@+id/ed_sybaogao_waiguan"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/DIMEN_90PX"
+                android:layout_alignLeft="@+id/tv_sybaogao_waiguan"
+                android:layout_below="@+id/tv_sybaogao_waiguan"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="6dp"
+                android:layout_toLeftOf="@+id/img_sybaogao_camera"
+                android:background="@drawable/loginedt_shape"
+                android:ems="10"
+                android:hint="请您写下您使用该产品的美观程度……"
+                android:padding="@dimen/DIMEN_20PX"
+                android:singleLine="true"
+                android:textSize="@dimen/DIMEN_24PX" />
+
+            <ImageView
+                android:id="@+id/img_sybaogao_camera"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/ed_sybaogao_waiguan"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/ed_sybaogao_waiguan"
+                android:layout_marginRight="14dp"
+                android:src="@drawable/zhaoxianji" />
+
+            <TextView
+                android:id="@+id/tv_sybaogao_xingneng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/ed_sybaogao_waiguan"
+                android:layout_below="@+id/ed_sybaogao_waiguan"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/chanpinzhiliang"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:text="产品质量"
+                android:textSize="@dimen/DIMEN_32PX" />
+
+            <EditText
+                android:id="@+id/ed_sybaogao_xingneng"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/DIMEN_90PX"
+                android:layout_alignLeft="@+id/tv_sybaogao_xingneng"
+                android:layout_alignRight="@+id/img_sybaogao_camera"
+                android:layout_below="@+id/tv_sybaogao_xingneng"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/loginedt_shape"
+                android:ems="10"
+                android:hint="请您写下您使用该产品的质量情况和建议"
+                android:padding="@dimen/DIMEN_20PX"
+                android:singleLine="true"
+                android:textSize="@dimen/DIMEN_24PX" />
+
+            <TextView
+                android:id="@+id/tv_sybaogao_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/ed_sybaogao_xingneng"
+                android:layout_below="@+id/ed_sybaogao_xingneng"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/jiage"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:text="产品价格"
+                android:textSize="@dimen/DIMEN_32PX" />
+
+            <EditText
+                android:id="@+id/ed_sybaogao_price"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/DIMEN_90PX"
+                android:layout_alignLeft="@+id/tv_sybaogao_price"
+                android:layout_alignRight="@+id/ed_sybaogao_xingneng"
+                android:layout_below="@+id/tv_sybaogao_price"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/loginedt_shape"
+                android:ems="10"
+                android:hint="请您写下您使用该产品价格的满意度"
+                android:padding="@dimen/DIMEN_20PX"
+                android:singleLine="true"
+                android:textSize="@dimen/DIMEN_24PX" />
+
+            <TextView
+                android:id="@+id/tv_sybaogao_pingfen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/ed_sybaogao_price"
+                android:layout_below="@+id/ed_sybaogao_price"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/pingfen"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:text="综合评分"
+                android:textSize="@dimen/DIMEN_32PX" />
+
+            <RatingBar
+                android:id="@+id/star_sybaogao"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_below="@+id/ed_sybaogao_price"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/tv_sybaogao_pingfen"
+                android:progressDrawable="@drawable/room_def_rating_bar"
+                android:stepSize="1" />
+
+            <ImageView
+                android:id="@+id/img_sybaogao_xieyi"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/star_sybaogao"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/yixuanzhong" />
+
+            <TextView
+                android:id="@+id/tv_noway_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/img_sybaogao_xieyi"
+                android:layout_toRightOf="@+id/img_sybaogao_xieyi"
+                android:paddingLeft="@dimen/DIMEN_20PX"
+                android:text="我已阅读并同意"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_sybaogao_xieyi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_noway_"
+                android:layout_toRightOf="@+id/tv_noway_"
+                android:text="《你车我车用户使用协议》"
+                android:textColor="@color/grentxt"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_sybaogao"
+                style="@style/Btn_entenrTheme"
+                android:layout_width="400dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/tv_noway_"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/submit" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/btn_sybaogao"
+                android:text=" " />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

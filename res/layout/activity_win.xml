@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/parentcontainer"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/top"
+        style="@style/relativeLayout_title" >
+
+        <TextView
+            style="@style/relativeLayout_title_textView"
+            android:text="@string/fedpas" />
+
+        <TextView style="@style/relativeLayout_title_leftTextView" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TextView
+            android:id="@+id/login"
+            style="@style/LeftAndRightThem"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/DIMEN_90PX"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/DIMEN_50PX"
+            android:background="@drawable/logintxt_shape"
+            android:gravity="center"
+            android:text="@string/enter"
+            android:textColor="@color/white"
+            android:textSize="@dimen/DIMEN_36PX" />
+
+        <TextView
+            android:id="@+id/txt_enter"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/login"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/DIMEN_30PX" />
+
+        <ImageView
+            android:id="@+id/img_enter"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/txt_enter"
+            android:scaleType="center"
+            android:src="@drawable/message" />
+    </RelativeLayout>
+
+</LinearLayout>

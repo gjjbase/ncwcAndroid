@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/parentcontainer"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/relativeLayout_title" >
+
+        <TextView
+            style="@style/relativeLayout_title_textView"
+            android:text="@string/feedback" />
+
+        <TextView style="@style/relativeLayout_title_leftTextView" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/edt_feed"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/DIMEN_20PX"
+        android:background="@drawable/loginedt_shape"
+        android:gravity="left|top"
+        android:hint="@string/aboutsmsg"
+        android:minHeight="@dimen/DIMEN_300PX"
+        android:textColorHint="#c8c8c8"
+        android:padding="@dimen/DIMEN_20PX"
+        android:textSize="@dimen/DIMEN_30PX" />
+
+    <TextView
+        android:id="@+id/submit"
+        style="@style/Btn_entenrTheme"
+        android:text="@string/submit" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/DIMEN_62PX" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:textColor="#333333"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:padding="@dimen/DIMEN_20PX"
+                android:text="@string/feedbookmsg" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

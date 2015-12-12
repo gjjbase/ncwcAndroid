@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/share_wangqi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color" >
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        style="@style/relativeLayout_title" >
+
+        <TextView 
+            android:id="@+id/img_back_01"
+            style="@style/relativeLayout_title_leftTextView" />
+        <!-- <ImageView
+            android:id="@+id/img_back_01"
+            android:layout_width="14dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/fanhui"
+            android:padding="@dimen/DIMEN_20PX" /> -->
+
+        <TextView
+            style="@style/relativeLayout_title_textView"
+            android:text="@string/product_info" />
+
+        <ImageView
+            android:id="@+id/img_share_02"
+            android:layout_width="20dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/share" />
+    </RelativeLayout>
+
+    <com.ncwcandroid.ui.xlistview.XListView
+        android:id="@+id/lv_wangqi_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl"
+        android:divider="@null"
+        android:listSelector="@drawable/list_item_wangqi" />
+
+</RelativeLayout>

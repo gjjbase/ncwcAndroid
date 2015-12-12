@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/parentcontainer"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/relativeLayout_title" >
+
+        <TextView
+            style="@style/relativeLayout_title_textView"
+            android:text="@string/modpsw" />
+
+        <TextView style="@style/relativeLayout_title_leftTextView" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/DIMEN_90PX"
+        android:layout_marginTop="@dimen/DIMEN_28PX" >
+
+        <EditText
+            android:id="@+id/edt_email"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/DIMEN_20PX"
+            android:layout_marginRight="@dimen/DIMEN_20PX"
+            android:background="@drawable/loginedt_shape"
+            android:hint="@string/exampleeamil"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="@dimen/DIMEN_20PX"
+            android:singleLine="true"
+            android:textSize="@dimen/DIMEN_24PX" />
+
+        <TextView
+            android:id="@+id/txt_fidtxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/DIMEN_30PX"
+            android:text="@string/tpl_get_verify_code"
+            android:textColor="@color/grentxt"
+            android:textSize="@dimen/DIMEN_24PX" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/edt_code"
+        style="@style/EdittextTheme"
+        android:layout_marginTop="@dimen/DIMEN_28PX"
+        android:hint="@string/tpl_verify_code_hint"
+        android:paddingLeft="@dimen/DIMEN_20PX" />
+
+    <TextView
+        android:id="@+id/txt_rdt"
+        style="@style/Btn_entenrTheme"
+        android:layout_marginTop="@dimen/DIMEN_30PX"
+        android:text="@string/enter" />
+
+</LinearLayout>

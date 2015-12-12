@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color" >
+
+    <RelativeLayout
+        android:id="@+id/rl01"
+        style="@style/relativeLayout_title" >
+
+        <ImageView
+            android:id="@+id/img_back_06"
+            android:layout_width="13dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/back" />
+
+        <TextView
+            style="@style/relativeLayout_title_textView"
+            android:text="@string/tab_function" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_noway_info_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_noway_info_01"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="成功参与“你车我车”免费试用活动" />
+
+    <TextView
+        android:id="@+id/tv_noway_info_04"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_alignRight="@+id/btn_info_back"
+        android:layout_below="@+id/tv_noway_info_02"
+        android:layout_marginTop="50dp"
+        android:layout_toRightOf="@+id/img_tishi"
+        android:text="关注微信公众号“你车我车”并积极参与体验活动不仅可以增加中奖率，还能第一时间查看中奖名单！"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/btn_info_back"
+        style="@style/Btn_entenrTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_noway_info_04"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="7dp"
+        android:text="@string/enter" />
+
+    <ImageView
+        android:id="@+id/img_noway_info_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl01"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/chenggong" />
+
+    <!--
+         <TextView
+        android:id="@+id/tv_noway_info_03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="本期审核结果将会在3个工作日后公布" />
+    -->
+
+    <ImageView
+        android:id="@+id/img_tishi"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_alignBottom="@+id/tv_noway_info_04"
+        android:layout_alignLeft="@id/btn_info_back"
+        android:src="@drawable/tishi" />
+
+</RelativeLayout>

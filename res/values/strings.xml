@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">你车我车</string>
+    <string name="action_settings">Settings</string>
+    <!-- 刷新 -->
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hintbm">上拉加载</string>
+    <string name="xlistview_header_hint_loading">正在加载..</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <!-- 主界面 -->
+    <string name="tab_function">免费试用</string>
+    <string name="tab_shopping">往期回顾</string>
+    <string name="tab_self">个人</string>
+    <!-- 免费试用 -->
+    <string name="bouttobegin">即将开始</string>
+    <string name="trila">正在进行</string>
+    <string name="product_info">产品详情</string>
+    <!-- 往期回顾 -->
+    <string name="suresplace">确认地址</string>
+    <string name="noselect">未申请</string>
+    <string name="shiyongbaogao">试用报告</string>
+    <string name="tijiaosybg">提交试用报告</string>
+    <string name="zhongjiangMD">中奖名单</string>
+    <!-- 登录 注册 -->
+    <string name="login">登录</string>
+    <string name="name">请输入邮箱/手机号/用户名</string>
+    <string name="pass">请输入6位以上的密码</string>
+    <string name="psw">您的密码</string>
+    <string name="rpass">请再次输入密码</string>
+    <string name="refcode">请输入邀请码(选填)</string>
+    <string name="fidpsw">忘记密码？</string>
+    <string name="resetpsw">重置密码</string>
+    <string name="reig">注册</string>
+    <string name="automatic">下次自动登录</string>
+    <string name="rember">记住密码</string>
+    <string name="putnickname">请输入您的昵称</string>
+    <string name="putemail">请输入您的常用邮箱</string>
+    <string name="fedpas">找回密码</string>
+    <string name="enterphonepsw">密码设置成功</string>
+    <string name="enteremilpsw">新密码已经发送到您的邮箱,请注意查收</string>
+    <!-- 个人中心 -->
+    <string name="persettion">个人设置</string>
+    <string name="percenter">个人中心</string>
+    <string name="actionrec">活动记录</string>
+    <string name="actionint">活动介绍</string>
+    <string name="aboutus">关于我们</string>
+    <string name="aboutncwc">关于你车我车</string>
+    <string name="examplemsg">丰田牌专用汽车油</string>
+    <string name="exampletime">开始时间:2015-06-09</string>
+    <string name="aboutsmsg">你车我车感谢您的支持</string>
+    <string name="feedback">用户反馈</string>
+    <string name="versionup">版本更新</string>
+    <string name="grade">等级</string>
+    <string name="integral">积分</string>
+    <!-- 个人设置 -->
+    <string name="username">用户名</string>
+    <string name="nickname">昵称</string>
+	<string name="setdefult">默认</string>
+	<string name="selectdefult">选择</string>
+    <string name="mobli">手机号</string>
+    <string name="putnick">请输入昵称</string>
+    <string name="sex">性别</string>
+    <string name="sex_man">男</string>
+    <string name="sex_woman">女</string>
+    <string name="sex_none">保密</string>
+    <string name="pwdservice">密码服务</string>
+    <string name="adsmanagement">地址管理</string>
+    <string name="finishapp">退出登录</string>
+    <string name="finishappenter">确认退出?</string>
+    <string name="modpsw">修改密码</string>
+    <string name="bindphone">绑定手机号</string>
+    <string name="modifymoile">修改手机号</string>
+    <string name="removemoile">设置手机号</string>
+    <string name="setsex">性别设置</string>
+    <string name="binemail">邮箱</string>
+    <string name="modifemail">绑定邮箱</string>
+    <string name="removeeamil">重置邮箱</string>
+    <string name="modifnickname">修改昵称</string>
+    <string name="modifnsex">修改性别</string>
+    <string name="exampleads">请输入地址</string>
+    <string name="exampleeamil">请输入邮箱</string>
+    <string name="examplesex">请输入性别</string>
+    <string name="fromalbumselection">从相册选择</string>
+    <string name="photograph">拍照</string>
+    <!-- 地址管理 -->
+    <string name="addads">新增地址</string>
+    <string name="editads">编辑地址</string>
+    <string name="add_msg">请认真填写地址，以便我们准确收货</string>
+    <string name="add_name">请输入收货人姓名</string>
+    <string name="add_ads">请输入您的详细地址</string>
+    <string name="add_moblie">请输入您的手机号</string>
+    <string name="add_code">请输入您的邮编</string>
+    <!-- 密码服务 -->
+    <string name="new_pswd">请输入您的新密码</string>
+    <string name="new_name">请输入您的新密码</string>
+    <string name="succed">密码设置成功</string>
+    <string name="phonesucced">手机号设置成功</string>
+    <string name="emailsucced">邮箱设置成功</string>
+    <string name="beillphone">绑定手机</string>
+    <string name="beillemail">绑定邮箱</string>
+    <string name="removeemail">重置邮箱</string>
+    <!-- 活动介绍 -->
+    <string name="freeproces">免费试用流程</string>
+    <string name="souces">筛选规则</string>
+    <string name="souces1">我们在筛选申请的时候会考虑这些:</string>
+    <string name="souces2">\u3000\u30001·活跃在微博微信以及连续参加活动的用户</string>
+    <string name="souces3">\u3000\u30002·有过详细精美的试用报告者</string>
+    <string name="souces4">\u3000\u30003·提出有价值建议反馈和创意的用户</string>
+    <string name="freeresturn">查看试用结果</string>
+    <string name="freesubmit">提交试用结果</string>
+    <string name="usprocess">\u3000\u3000试用流程免费试用主打汽车用品的免费试用。由厂商提供汽车用品的现货,用户只需申请就有可能获得免费试用资格。并在试用后提交试用报告即可永久保留试用产品。免费试用能让大家听到用户最最真实的声音。在这里，您的每一条讨论、每一条建议都将影响着产品的未来。我们致力于打造中国可信赖的汽车用品电商平台！</string>
+    <string name="freequalif">\u3000\u3000查看申请结果试用名单公布后，可以进入“个人中心”页面，点击活动记录的子页面，查看试用活动记录。在往期回顾> 产品详情页也可以查看本次申请的最终结果。如果显示"恭喜中奖"，表示您获得了试用资格；如果显示“再接再厉”，则表示您并未获得试用资格。 </string>
+    <string name="trialresults">\u3000\u3000获得试用资格的用户，我们将按照您填写的收货地址为您邮寄产品。收到产品后，请立即开始体验，并在2周之内提交试用报告。进入 往期回顾> 产品详情，点击“提交试用报告”，您就可以填写并提交您的试用报告了。优秀的试用报告得更多的奖励。逾期未提交报告者，将被列入黑名单，失去试用机会。</string>
+    <string name="aboutsus">\u3000\u3000北京你车我车电子商务股份有限公司所创建的你车我车是中国最大的汽车用品网购平台,也是中国最专业的汽车用品信息发布平台.这里汇聚了上千家世界一流的汽车用品厂商和5万余家汽车用品线下服务商,并通过便捷的平台操作使B2B、B2C、O2O等多种商业模式的融合成为可能.——你车我车顺势而生！\n\u3000\u3000数据显示：2013年,中国汽车保有量达到1.4亿量,由此产生的汽车用品消费高达5025亿人民币.专家预测,2015年中国的汽车用品带来的产值将达到6300亿.然而,这一庞大的数字的背后,却是中国汽车用品行业电商化发展的严重不足.其根本原因在于中国至今没有一家专业的汽车用品垂直电商平台.在社会消费品电商化的大趋势下,你车我车,专业车品领导者！\n\u3000\u3000电子商务的迅猛发展为人们的生活带来了极大的便利,很多时候足不出户便可购遍全球.然而,任何事物都有两面,电商同样也是一把双刃剑：在便利、实惠的背后,是商品质量的不确定性.在非专业领域,如服饰、书籍等商品,由于假货并不影响其适用性,为了方便消费者大可以睁一只眼闭一只眼.然而,在汽车用品这种专业商品领域,消费者几乎对假货“零容忍”——无论多小的纰漏,都会对行车安全造成巨大威胁.汽车用品的专业性决定了其不能和一般社会消费品混为一谈,只能走垂直电商模式.而中国这么大的汽车用品市场,却没有诞生一家具有全国影响力的垂直电商.\n\u3000\u3000专业的车品,需要具有专业素质的电商平台来运作.你车我车来了！我们汇聚了1000多家世界一流的汽车用品厂商,同时建立了庞大的线下加盟服务体系,将中国汽车用品流通渠道彻底电商化升级,实现汽车用品障专业货源的同时,真正做到了正品低价.你车我车,专业车品领导者！你车我车,开启电商3.0时代！\n\u3000\u3000电商1.0时代,企业与企业之间通过B2B电商平台（如阿里巴巴）进行交易,开拓了中国的电商蓝海.\n\u3000\u3000电商2.0时代,消费者（C）作为独立的电商角色被加入进来,产生了B2C、C2C,甚至C2B的商业模式,让中国电商真正繁荣起来.而在你车我车,无论B2B、B2C,还是新兴的O2O,都只是商业模式的环节之一.\n\u3000\u3000 你车我车,开启中国电商3.0时代.你车我车,将线下流通渠道彻底电商化升级,开启中国电商3.0时代！</string>
+	<string name="feedbookmsg">\u3000\u3000见证一段免费体验平台的发展历程，你车我车，属于你我 !\n\n\u3000\u3000每个阶段都会有新的视角，新的功能需求应运而生，消费者可以搜集不同的视角，用自己的语言阐述自己的想法和意见。\n\n\u3000\u3000你车我车和大家一起来打造一款，真正从用户角度出发，为用户服务的免费体验平台。\n\n\u3000\u3000体验，感受，发现，跟随，同在。\n\u3000\u300021世纪最新的上线模式!\n\n\u3000\u3000不同阶段的注册用户会享受不同的体验概率!\n\n\u3000\u3000残缺也是一种完美，你想了解一个电商平台是如何做起来的吗？\n\n\u3000\u3000这是一个车与互联网的时代，跟着我们一起，让互联网触手可及!</string>
+    <!-- 下载更新 -->
+    <string name="upmsg">现在是否要下载新版本</string>
+    <string name="immdownload">立即下载</string>
+    <!-- 通用 -->
+    <string name="enter">确认</string>
+    <string name="back">返回</string>
+    <string name="next">下一步</string>
+    <string name="agreement">用户协议</string>
+    <string name="agreemented">我已阅读你车我并同意《你车我车开发协议》</string>
+    <string name="edit">编辑</string>
+    <string name="delect">删除</string>
+    <string name="tip">小提示</string>
+    <string name="submit">提交</string>
+    <string name="infinish">完成</string>
+    <string name="cancel">取消</string>
+    <string name="tip_content">请认真填写您的所有信息，如因电话和地址等信息错误导致您的延误或者收不到货，请用户自行拨打400电话</string>
+    <!-- shareSDK三方登录 -->
+    <integer name="app_version_code">2</integer>
+
+    <string name="app_version">2.0.0</string>
+    <string name="proj_name">ShareSDK_TPL</string>
+    <string name="share_sdk">Share SDK</string>
+    <string name="login_with_weixin">用微信登录</string>
+    <string name="login_with_sina_weibo">用新浪微博登录</string>
+    <string name="login_with_qq">用QQ登录</string>
+    <string name="login_with_other_plat">其他帐号登录</string>
+    <string name="userid_found">用户信息已存在，正在跳转登录操作…</string>
+    <string name="logining">使用%s帐号登录中…</string>
+    <string name="auth_cancel">授权操作已取消</string>
+    <string name="auth_error">授权操作遇到错误，请阅读Logcat输出; \n 如微信登录，需要微信客户端</string>
+    <string name="auth_complete">授权成功…</string>
+    <string name="if_register_needed">如果您需要注册功能…</string>
+    <string name="after_auth">一般来说第三方登录时，第三方平台已经为您完成用户身份校验，您可以放心让用户登录。\n\n但如果您需要判断用户是否为新用户，可以在授权操作完成后，将用户的信息通过字段“HashMap userInfo”携带给login方法。客户端通过“String userId”执行登录请求，如果服务端判定此userId为未注册用户，可以将userInfo发送给注册接口，获取用户在此平台上的昵称、头像等数据，然后执行注册</string>
+    <string name="tpl_ok">确定</string>
+    <string name="tpl_cancel">取消</string>
+    <string name="tpl_key_user_icon">头像</string>
+    <string name="tpl_key_user_name">昵称</string>
+    <string name="tpl_key_user_gender">性别</string>
+    <string name="tpl_key_user_note">备注</string>
+    <string name="tpl_value_user_note">请填写备注信息</string>
+    <string name="tpl_sign_user_info">用户信息</string>
+    <string name="tpl_sign_up">注册</string>
+    <string name="tpl_girl">女</string>
+    <string name="tpl_boy">男</string>
+    <string name="tpl_camera">拍照</string>
+    <string name="tpl_picture">从相册获取</string>
+    <string name="tpl_change_user_name_title">更改名字</string>
+    <string name="tpl_change_user_note_title">更改备注</string>
+    <string name="tpl_input_user_name_hint">好名字可以让你的朋友更容易记住你</string>
+    <string name="tpl_input_user_note_hint">自定义备注信息，给你带来更多吸引</string>
+    <string name="tpl_no_sdcard">sdcard 卡不存在</string>
+    <string name="tpl_msg_login_hint">请输入手机号码</string>
+    <string name="tpl_verify_code_hint">请输验证码</string>
+    <string name="tpl_get_verify_code">获取验证码</string>
+    <string name="tpl_send_verify_code">检验验证码</string>
+    <string name="signup_success">注册成功</string>
+    <string name="signup_failed">注册失败</string>
+    <string name="res_new">已刷新</string>
+    <string name="load_ok">加载完成</string>
+    <string name="nodatas">没有更多数据了</string>
+
+</resources>

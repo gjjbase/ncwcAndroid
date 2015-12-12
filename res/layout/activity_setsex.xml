@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/parentcontainer"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/relativeLayout_title" >
+
+        <TextView
+            style="@style/relativeLayout_title_textView"
+            android:text="@string/setsex" />
+
+        <TextView style="@style/relativeLayout_title_leftTextView" />
+
+        <TextView
+            style="@style/relativeLayout_title_rightTextView"
+            android:onClick="infinish"
+            android:text="@string/infinish" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/group_sex"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/DIMEN_20PX" >
+
+        <RadioButton
+            android:id="@+id/sex_man"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/DIMEN_68PX"
+            android:background="@drawable/horizontal_preference_single_item"
+            android:button="@null"
+            android:drawableRight="@drawable/radiosharp"
+            android:paddingLeft="@dimen/DIMEN_60PX"
+            android:paddingRight="@dimen/DIMEN_20PX"
+            android:text="@string/sex_man"
+            android:textColor="@color/black"
+            android:textSize="@dimen/DIMEN_32PX"
+            android:textStyle="bold" />
+
+        <View style="@style/relativeLayout_item_lineView" />
+
+        <RadioButton
+            android:id="@+id/sex_woman"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/DIMEN_68PX"
+            android:background="@drawable/horizontal_preference_single_item"
+            android:button="@null"
+            android:drawableRight="@drawable/radiosharp"
+            android:paddingLeft="@dimen/DIMEN_60PX"
+            android:paddingRight="@dimen/DIMEN_20PX"
+            android:text="@string/sex_woman"
+            android:textColor="@color/black"
+            android:textSize="@dimen/DIMEN_32PX"
+            android:textStyle="bold" />
+
+        <View style="@style/relativeLayout_item_lineView" />
+
+        <RadioButton
+            android:id="@+id/sex_none"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/DIMEN_68PX"
+            android:background="@drawable/horizontal_preference_single_item"
+            android:button="@null"
+            android:checked="true"
+            android:drawableRight="@drawable/radiosharp"
+            android:paddingLeft="@dimen/DIMEN_60PX"
+            android:paddingRight="@dimen/DIMEN_20PX"
+            android:text="@string/sex_none"
+            android:textColor="@color/black"
+            android:textSize="@dimen/DIMEN_32PX"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+</LinearLayout>

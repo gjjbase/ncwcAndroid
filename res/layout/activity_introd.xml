@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/relativeLayout_title" >
+
+        <TextView
+            style="@style/relativeLayout_title_textView"
+            android:text="@string/actionint" />
+
+        <TextView style="@style/relativeLayout_title_leftTextView" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/DIMEN_30PX"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:paddingLeft="@dimen/DIMEN_20PX"
+                    android:scaleType="center"
+                    android:src="@drawable/souce" />
+
+                <TextView
+                    style="@style/base_thetextView"
+                    android:drawablePadding="@dimen/DIMEN_10PX"
+                    android:gravity="center_vertical|left"
+                    android:padding="@dimen/DIMEN_10PX"
+                    android:text="@string/souces"
+                    android:textColor="@color/introtextcolor"
+                    android:textSize="@dimen/DIMEN_30PX" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/DIMEN_70PX"
+                android:layout_marginTop="@dimen/DIMEN_22PX"
+                android:text="@string/souces1"
+                android:textColor="@color/introtextcolor"
+                android:textSize="@dimen/DIMEN_30PX" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/DIMEN_70PX"
+                android:layout_marginTop="@dimen/DIMEN_16PX"
+                android:text="@string/souces2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/DIMEN_30PX" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/DIMEN_70PX"
+                android:layout_marginTop="@dimen/DIMEN_12PX"
+                android:text="@string/souces3"
+                android:textColor="@color/black"
+                android:textSize="@dimen/DIMEN_30PX" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/DIMEN_70PX"
+                android:layout_marginTop="@dimen/DIMEN_12PX"
+                android:text="@string/souces4"
+                android:textColor="@color/black"
+                android:textSize="@dimen/DIMEN_30PX" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/DIMEN_26PX"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:paddingLeft="@dimen/DIMEN_20PX"
+                    android:scaleType="center"
+                    android:src="@drawable/mianfeishiyong" />
+
+                <TextView
+                    style="@style/base_thetextView"
+                    android:drawablePadding="@dimen/DIMEN_10PX"
+                    android:gravity="center_vertical|left"
+                    android:padding="@dimen/DIMEN_10PX"
+                    android:text="@string/freeproces"
+                    android:textColor="@color/introtextcolor"
+                    android:textSize="@dimen/DIMEN_30PX" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/DIMEN_16PX"
+                android:padding="@dimen/DIMEN_10PX"
+                android:text="@string/usprocess"
+                android:textColor="@color/black"
+                android:textSize="@dimen/DIMEN_30PX" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/DIMEN_10PX"
+                android:scaleType="fitCenter"
+                android:src="@drawable/shiyongliucheng" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/DIMEN_100PX"
+                android:layout_marginTop="@dimen/DIMEN_16PX"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:paddingLeft="@dimen/DIMEN_20PX"
+                    android:scaleType="center"
+                    android:src="@drawable/chakanshiyongjieguo" />
+
+                <TextView
+                    style="@style/base_thetextView"
+                    android:drawablePadding="@dimen/DIMEN_10PX"
+                    android:gravity="center_vertical|left"
+                    android:padding="@dimen/DIMEN_10PX"
+                    android:text="@string/freeresturn"
+                    android:textColor="@color/introtextcolor"
+                    android:textSize="@dimen/DIMEN_30PX" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/DIMEN_10PX"
+                android:padding="@dimen/DIMEN_10PX"
+                android:text="@string/freequalif"
+                android:textColor="@color/black"
+                android:textSize="@dimen/DIMEN_30PX" />
+
+            <include layout="@layout/recoadapter_item" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/DIMEN_100PX"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:paddingLeft="@dimen/DIMEN_20PX"
+                    android:scaleType="center"
+                    android:src="@drawable/mianfeishiyong" />
+
+                <TextView
+                    style="@style/base_thetextView"
+                    android:drawablePadding="@dimen/DIMEN_10PX"
+                    android:gravity="center_vertical|left"
+                    android:padding="@dimen/DIMEN_10PX"
+                    android:text="@string/freesubmit"
+                    android:textColor="@color/introtextcolor"
+                    android:textSize="@dimen/DIMEN_30PX" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/DIMEN_10PX"
+                android:text="@string/trialresults"
+                android:textColor="@color/black"
+                android:textSize="@dimen/DIMEN_30PX" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

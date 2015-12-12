@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/parentcontainer"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        style="@style/EdittextTheme"
+        android:layout_height="@dimen/DIMEN_270PX"
+        android:layout_margin="@dimen/DIMEN_20PX" >
+
+        <LinearLayout
+            android:id="@+id/botm"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/DIMEN_80PX"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal" >
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/horizontal_preference_single_item"
+                android:descendantFocusability="blocksDescendants" >
+
+                <TextView
+                    android:id="@+id/txt_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:drawableLeft="@drawable/bianji"
+                    android:drawablePadding="@dimen/DIMEN_8PX"
+                    android:gravity="center"
+                    android:text="@string/edit"
+                    android:textColor="@color/grentxt"
+                    android:textSize="@dimen/DIMEN_32PX" />
+            </FrameLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="fill_parent"
+                android:background="@color/bg_color" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/horizontal_preference_single_item"
+                android:descendantFocusability="beforeDescendants" >
+
+                <TextView
+                    android:id="@+id/txt_delect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:drawableLeft="@drawable/shanchu"
+                    android:drawablePadding="@dimen/DIMEN_8PX"
+                    android:gravity="center"
+                    android:text="@string/delect"
+                    android:textColor="@color/bgtitlecolor"
+                    android:textSize="@dimen/DIMEN_32PX" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/botm"
+            android:padding="@dimen/DIMEN_20PX" >
+
+            <TextView
+                android:id="@+id/txt_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:ellipsize="end"
+                android:maxEms="8"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/DIMEN_32PX" />
+
+            <CheckBox
+                android:id="@+id/txt_def"
+                style="@style/CustomCheckboxTheme2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/DIMEN_40PX"
+                android:text="@string/selectdefult"
+                android:textColor="#1ddbe1"
+                android:textSize="@dimen/DIMEN_32PX" />
+
+            <TextView
+                android:id="@+id/txt_ads"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_below="@id/txt_username"
+                android:ellipsize="end"
+                android:maxEms="8"
+                android:paddingTop="@dimen/DIMEN_10PX"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text32size" />
+
+            <TextView
+                android:id="@+id/txt_mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/txt_username"
+                android:layout_toRightOf="@id/txt_ads"
+                android:gravity="right|center"
+                android:paddingTop="@dimen/DIMEN_10PX"
+                android:textColor="@color/grentxt"
+                android:textSize="@dimen/text32size" />
+        </RelativeLayout>
+
+        <View
+            style="@style/relativeLayout_item_lineView"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/DIMEN_80PX"
+            android:background="@color/bg_color" />
+    </RelativeLayout>
+
+</LinearLayout>

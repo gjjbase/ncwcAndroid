@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/parentcontainer"
+    android:background="@drawable/horizontal_preference_single_item" >
+
+    <View
+        style="@style/relativeLayout_item_lineView"
+        android:layout_alignParentBottom="true" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/DIMEN_30PX"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/img_exp"
+                android:layout_width="@dimen/DIMEN_140PX"
+                android:layout_height="@dimen/DIMEN_140PX"
+                android:layout_marginBottom="@dimen/DIMEN_5PX"
+                android:layout_marginLeft="@dimen/DIMEN_70PX"
+                android:layout_marginTop="@dimen/DIMEN_5PX"
+                android:scaleType="center"
+                android:src="@drawable/chanpin" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/DIMEN_140PX"
+                android:layout_marginBottom="@dimen/DIMEN_5PX"
+                android:layout_marginLeft="@dimen/DIMEN_20PX"
+                android:layout_marginTop="@dimen/DIMEN_5PX" >
+
+                <ImageView
+                    android:id="@+id/img_type"
+                    android:layout_width="@dimen/DIMEN_170PX"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="@dimen/DIMEN_50PX"
+                    android:src="@drawable/shenhe" />
+
+                <TextView
+                    android:id="@+id/txt_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@id/img_type"
+                    android:ellipsize="end"
+                    android:paddingTop="@dimen/DIMEN_20PX"
+                    android:singleLine="true"
+                    android:text="@string/examplemsg"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/DIMEN_32PX" />
+
+                <TextView
+                    android:id="@+id/txt_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:paddingBottom="@dimen/DIMEN_20PX"
+                    android:text="@string/exampletime"
+                    android:textColor="@color/login_btned"
+                    android:textSize="@dimen/DIMEN_30PX" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/DIMEN_100PX"
+            android:layout_height="@dimen/DIMEN_100PX"
+            android:layout_margin="@dimen/DIMEN_10PX" >
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:src="@drawable/huibiaobeijing" />
+
+            <TextView
+                android:id="@+id/txt_period"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="01\n期"
+                android:textColor="@color/white"
+                android:textSize="@dimen/DIMEN_28PX" />
+        </RelativeLayout>
+    </FrameLayout>
+
+</RelativeLayout>

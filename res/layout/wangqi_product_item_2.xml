@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/img_user"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/yonghu_moren" />
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/img_user"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@+id/img_user"
+        android:text="用户名"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="16dp"
+        android:text="时间"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/img_time"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_above="@+id/tv_pinglu"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="14dp"
+        android:layout_toLeftOf="@+id/tv_time"
+        android:src="@drawable/clock" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/DIMEN_50PX"
+        android:layout_alignLeft="@+id/img_user"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/img_user"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="17dp"
+        android:src="@drawable/wq_xq_01" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/DIMEN_50PX"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_alignTop="@+id/tv_waiguan"
+        android:src="@drawable/wq_xq_02" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/DIMEN_50PX"
+        android:layout_alignLeft="@+id/imageView2"
+        android:layout_alignTop="@+id/tv_zhiliang"
+        android:src="@drawable/wq_xq_03" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/DIMEN_50PX"
+        android:layout_alignLeft="@+id/imageView3"
+        android:layout_alignTop="@+id/tv_price"
+        android:src="@drawable/wq_xq_04" />
+
+    <ImageView
+        android:id="@+id/img_show_item"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/imageView4"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="4dp"
+        android:padding="4dp"
+        android:src="@drawable/ic_launcher" />
+
+    <RatingBar
+        android:id="@+id/star_zonghe"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/imageView1"
+        android:layout_below="@+id/tv_username"
+        android:layout_marginLeft="@dimen/DIMEN_20PX"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/img_show_item"
+        android:isIndicator="true"
+        android:progressDrawable="@drawable/room_def_rating_bar" />
+
+    <TextView
+        android:id="@+id/tv_waiguan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/star_zonghe"
+        android:layout_marginTop="9dp"
+        android:layout_toRightOf="@id/img_show_item"
+        android:paddingRight="@dimen/DIMEN_10PX"
+        android:text="这个。。。。。。。。。。。。"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_zhiliang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_waiguan"
+        android:layout_marginTop="9dp"
+        android:layout_toRightOf="@id/img_show_item"
+        android:paddingRight="@dimen/DIMEN_10PX"
+        android:text="那个。。。。。。。。。。。。"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_zhiliang"
+        android:layout_marginTop="9dp"
+        android:layout_toRightOf="@id/img_show_item"
+        android:paddingRight="@dimen/DIMEN_10PX"
+        android:text="算了。。。。。。。。。。。。"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/img_show_item"
+        android:background="@android:color/transparent"
+        android:scaleType="centerCrop" />
+
+</RelativeLayout>

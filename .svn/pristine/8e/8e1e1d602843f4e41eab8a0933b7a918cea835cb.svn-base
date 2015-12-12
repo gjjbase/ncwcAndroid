@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android_custom="http://schemas.android.com/apk/res/com.ncwcandroid.ui"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.ncwcandroid.ui.widget.RoundProgressBar
+        android:id="@+id/mProgress"
+        android:layout_width="@dimen/DIMEN_160PX"
+        android:layout_height="@dimen/DIMEN_160PX"
+        android_custom:roundColor="@color/white"
+        android_custom:roundProgressColor="@color/bgtitlecolor"
+        android_custom:roundWidth="@dimen/DIMEN_8PX"
+        android_custom:textColor="@color/white"
+        android_custom:textSize="@dimen/DIMEN_32PX" />
+
+</RelativeLayout>

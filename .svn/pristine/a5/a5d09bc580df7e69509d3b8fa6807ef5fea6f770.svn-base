@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/tv_wangqi_listitem1_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="14dp"
+        android:text="TextView"
+        android:textSize="@dimen/DIMEN_32PX" />
+
+    <TextView
+        android:id="@+id/tv_wangqi_listitem1_scores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_wangqi_listitem1_title"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:paddingRight="@dimen/DIMEN_20PX"
+        android:textSize="@dimen/DIMEN_30PX" />
+
+    <TextView
+        android:id="@+id/tv_wangqi_listitem1_some"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_wangqi_listitem1_scores"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="数量" />
+
+    <TextView
+        android:id="@+id/txt_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_wangqi_listitem1_some"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/tv_wangqi_listitem1_some"
+        android:text="数量" />
+
+    <TextView
+        android:id="@+id/tv_wangqi_sureplace"
+        style="@style/Btn_entenrTheme"
+        android:layout_width="140dp"
+        android:layout_height="@dimen/DIMEN_90PX"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_wangqi_listitem1_scores"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/sureplace_che"
+        android:gravity="center"
+        android:text="@string/suresplace" />
+
+    <View
+        android:id="@+id/imageView1"
+        style="@style/relativeLayout_item_lineView"
+        android:layout_height="1dp"
+        android:layout_below="@+id/bowlon"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/tv_wangqi_baogaotijiao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7dp"
+        android:gravity="center"
+        android:text="试用报告  "
+        android:textColor="@color/Red"
+        android:textSize="17sp" />
+
+    <RelativeLayout
+        android:id="@+id/bowlon"
+        android:layout_width="150dp"
+        android:layout_height="@dimen/DIMEN_90PX"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_wangqi_sureplace"
+        android:layout_marginLeft="@dimen/DIMEN_20PX"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/imgbtn_sybg"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/tvbar"
+            android:gravity="center"
+            android:text="\u3000\u3000提交试用报告"
+            android:textColor="@drawable/redandwithtext"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/img_left"
+            android:layout_width="@dimen/DIMEN_40PX"
+            android:layout_height="@dimen/DIMEN_40PX"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/DIMEN_30PX" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="150dp"
+        android:layout_height="@dimen/DIMEN_90PX"
+        android:layout_alignBottom="@+id/bowlon"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/bowlon"
+        android:layout_marginRight="@dimen/DIMEN_20PX" >
+
+        <TextView
+            android:id="@+id/imgbtn_zjmd"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/tvbar"
+            android:gravity="center"
+            android:text="\u3000\u3000查看中奖名单"
+            android:textColor="@drawable/redandwithtext"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="@dimen/DIMEN_40PX"
+            android:layout_height="@dimen/DIMEN_40PX"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/DIMEN_30PX"
+            android:src="@drawable/wangqi_gift" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_wangqi_listitem1_some"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="2dp"
+        android:text="人数" />
+
+    <ImageView
+        android:id="@+id/img_to_sy_pro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_wangqi_listitem1_title"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/tv_wangqi_listitem1_title"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/arrow" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_wangqi_baogaotijiao"
+        android:layout_alignTop="@+id/tv_wangqi_baogaotijiao"
+        android:layout_marginRight="4dp"
+        android:layout_toLeftOf="@+id/tv_wangqi_baogaotijiao"
+        android:src="@drawable/bookmark_l" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_wangqi_baogaotijiao"
+        android:layout_alignTop="@+id/tv_wangqi_baogaotijiao"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@+id/tv_wangqi_baogaotijiao"
+        android:src="@drawable/bookmark_r" />
+
+</RelativeLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/parentcontainer"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/relativeLayout_title" >
+
+        <TextView
+            style="@style/relativeLayout_title_textView"
+            android:text="@string/modpsw" />
+
+        <TextView style="@style/relativeLayout_title_leftTextView" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/DIMEN_90PX"
+        android:layout_marginTop="@dimen/DIMEN_28PX" >
+
+        <TextView
+            android:id="@+id/txt_code"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/DIMEN_20PX"
+            android:background="@drawable/logincodeleftsharp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="+86"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/edt_phone"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/DIMEN_20PX"
+            android:layout_toRightOf="@id/txt_code"
+            android:background="@drawable/logincoderightsharp"
+            android:hint="@string/tpl_msg_login_hint"
+            android:inputType="phone"
+            android:paddingLeft="@dimen/DIMEN_20PX"
+            android:singleLine="true"
+            android:textSize="@dimen/DIMEN_24PX" />
+
+        <TextView
+            android:id="@+id/txt_fidtxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/DIMEN_30PX"
+            android:text="@string/tpl_get_verify_code"
+            android:textColor="@color/grentxt"
+            android:textSize="@dimen/DIMEN_24PX" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/edt_putcode"
+        style="@style/EdittextTheme"
+        android:layout_marginTop="@dimen/DIMEN_28PX"
+        android:hint="@string/tpl_verify_code_hint"
+        android:paddingLeft="@dimen/DIMEN_20PX" />
+
+    <TextView
+        android:id="@+id/txt_rdt"
+        style="@style/Btn_entenrTheme"
+        android:layout_marginTop="@dimen/DIMEN_30PX"
+        android:text="@string/enter" />
+
+</LinearLayout>

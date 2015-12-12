@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/parentcontainer"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/relativeLayout_title" >
+
+        <TextView
+            style="@style/relativeLayout_title_textView"
+            android:text="@string/editads" />
+
+        <TextView style="@style/relativeLayout_title_leftTextView" />
+    </RelativeLayout>
+
+    <TextView
+        style="@style/relativeLayout_title"
+        android:layout_marginTop="@dimen/DIMEN_40PX"
+        android:background="@color/grentxt"
+        android:gravity="center"
+        android:text="@string/add_msg" />
+
+    <EditText
+        android:id="@+id/edt_username"
+        style="@style/EdittextTheme"
+        android:layout_marginLeft="@dimen/DIMEN_40PX"
+        android:layout_marginRight="@dimen/DIMEN_40PX"
+        android:layout_marginTop="@dimen/DIMEN_20PX"
+        android:hint="@string/add_name" />
+
+    <EditText
+        android:id="@+id/edt_ads"
+        style="@style/EdittextTheme"
+        android:layout_marginLeft="@dimen/DIMEN_40PX"
+        android:layout_marginRight="@dimen/DIMEN_40PX"
+        android:layout_marginTop="@dimen/DIMEN_10PX"
+        android:hint="@string/add_ads" />
+
+    <EditText
+        android:id="@+id/edt_phone"
+        style="@style/EdittextTheme"
+        android:inputType="phone"
+        android:layout_marginLeft="@dimen/DIMEN_40PX"
+        android:layout_marginRight="@dimen/DIMEN_40PX"
+        android:layout_marginTop="@dimen/DIMEN_10PX"
+        android:hint="@string/add_moblie" />
+
+    <EditText
+        android:id="@+id/edt_code"
+        style="@style/EdittextTheme"
+        android:layout_marginLeft="@dimen/DIMEN_40PX"
+        android:layout_marginRight="@dimen/DIMEN_40PX"
+        android:inputType="phone"
+        android:layout_marginTop="@dimen/DIMEN_10PX"
+        android:hint="@string/add_code" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/DIMEN_30PX"
+        android:background="@drawable/loginedt_shape"
+        android:minHeight="@dimen/DIMEN_200PX" >
+
+        <TextView
+            android:id="@+id/top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/DIMEN_20PX"
+            android:text="@string/tip"
+            android:textColor="@color/grentxt"
+            android:textSize="@dimen/text36size" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/top"
+            android:layout_margin="@dimen/DIMEN_20PX"
+            android:text="@string/tip_content"
+            android:textSize="@dimen/text24size" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txt_rdt"
+        style="@style/Btn_entenrTheme"
+        android:layout_marginTop="@dimen/DIMEN_30PX"
+        android:text="@string/enter" />
+
+</LinearLayout>

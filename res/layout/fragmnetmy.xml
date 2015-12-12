@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/parentcontainer"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/relativeLayout_title" >
+
+        <TextView
+            style="@style/relativeLayout_title_textView"
+            android:text="@string/percenter" />
+
+        <ImageView
+            android:id="@+id/txt_myset"
+            style="@style/relativeLayout_title_rightTextView"
+            android:padding="@dimen/DIMEN_20PX"
+            android:scaleType="center"
+            android:src="@drawable/my_setting" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/DIMEN_326PX" >
+
+        <ImageView
+            android:id="@+id/txt_backg"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/img_default"
+            android:scaleType="fitStart" />
+
+        <com.ncwcandroid.ui.widget.CircularImage
+            android:id="@+id/img_tx"
+            android:layout_width="@dimen/DIMEN_168PX"
+            android:layout_height="@dimen/DIMEN_168PX"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/DIMEN_10PX"
+            android:src="@drawable/img_default"
+            android:layout_marginTop="@dimen/DIMEN_10PX"
+            android:scaleType="fitCenter" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/DIMEN_168PX"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/DIMEN_10PX"
+            android:layout_marginLeft="@dimen/DIMEN_100PX"
+            android:layout_marginRight="@dimen/DIMEN_100PX"
+            android:layout_marginTop="@dimen/DIMEN_10PX" >
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/my_bgxz" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true" >
+
+                <TextView
+                    android:id="@+id/txt_nickname"
+                    style="@style/relativeLayout_title_textView"
+                    android:text="@string/app_name"
+                    android:textSize="@dimen/DIMEN_32PX"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_recoaction"
+        style="@style/horizontal_preference_single_item" >
+
+        <ImageView
+            style="@style/myset_leftimgitem"
+            android:src="@drawable/disk" />
+
+        <TextView
+            style="@style/myset_centext"
+            android:text="@string/actionrec" />
+
+        <ImageView
+            style="@style/myset_rightimgitem"
+            android:src="@drawable/backicon" />
+    </RelativeLayout>
+
+    <View style="@style/relativeLayout_item_lineView" />
+
+    <RelativeLayout
+        android:id="@+id/my_introd"
+        style="@style/horizontal_preference_single_item" >
+
+        <ImageView
+            style="@style/myset_leftimgitem"
+            android:src="@drawable/files" />
+
+        <TextView
+            style="@style/myset_centext"
+            android:text="@string/actionint" />
+
+        <ImageView
+            style="@style/myset_rightimgitem"
+            android:src="@drawable/backicon" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/my_aboutus"
+        style="@style/horizontal_preference_single_item"
+        android:layout_marginTop="@dimen/DIMEN_20PX" >
+
+        <ImageView
+            style="@style/myset_leftimgitem"
+            android:src="@drawable/group" />
+
+        <TextView
+            style="@style/myset_centext"
+            android:text="@string/aboutus" />
+
+        <ImageView
+            style="@style/myset_rightimgitem"
+            android:src="@drawable/backicon" />
+    </RelativeLayout>
+
+    <View style="@style/relativeLayout_item_lineView" />
+
+    <RelativeLayout
+        android:id="@+id/my_setfeedbook"
+        style="@style/horizontal_preference_single_item" >
+
+        <ImageView
+            style="@style/myset_leftimgitem"
+            android:src="@drawable/pencil" />
+
+        <TextView
+            style="@style/myset_centext"
+            android:text="@string/feedback" />
+
+        <ImageView
+            style="@style/myset_rightimgitem"
+            android:src="@drawable/backicon" />
+    </RelativeLayout>
+
+    <View style="@style/relativeLayout_item_lineView" />
+
+    <RelativeLayout
+        android:id="@+id/my_setupdata"
+        style="@style/horizontal_preference_single_item" >
+
+        <ImageView
+            style="@style/myset_leftimgitem"
+            android:src="@drawable/reload" />
+
+        <TextView
+            style="@style/myset_centext"
+            android:text="@string/versionup" />
+
+        <TextView
+            android:id="@+id/txt_upmsg"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/DIMEN_60PX"
+            android:gravity="center"
+             />
+
+        <ImageView
+            style="@style/myset_rightimgitem"
+            android:src="@drawable/backicon" />
+    </RelativeLayout>
+
+</LinearLayout>
