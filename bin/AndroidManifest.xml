@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ncwcandroid.ui"
-    android:versionCode="5"
-    android:versionName="1.0.4" >
+    android:versionCode="16"
+    android:versionName="1.1.5" >
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -259,6 +259,14 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|stateUnchanged" >
         </activity>
+
+        <receiver
+            android:name=".interfac.BootBroadcastReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.ncwcandroid.ui.interfac.BootBroadcastReceiver" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

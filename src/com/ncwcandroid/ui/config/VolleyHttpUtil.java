@@ -18,11 +18,15 @@ import android.os.Handler;
 import android.util.Log;
 
 import com.android.volley.AuthFailureError;
+import com.android.volley.NetworkResponse;
+import com.android.volley.ParseError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
+import com.android.volley.Response;
 import com.android.volley.Response.ErrorListener;
 import com.android.volley.Response.Listener;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.HttpHeaderParser;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.ncwcandroid.ui.interfac.VolleyStringListener;
@@ -79,13 +83,15 @@ public class VolleyHttpUtil {
 	 * @param view
 	 *            是否显示正在加载的对话框
 	 */
-	protected void getObject(final Activity activity, String url, final Map<String, String> Params, final String type, boolean view) {
+	protected void getObject(final Activity activity, String url,
+			final Map<String, String> Params, final String type, boolean view) {
 		StringBuilder sb = new StringBuilder();
 		if (Params != null && !Params.isEmpty()) {
 			for (Map.Entry<String, String> entry : Params.entrySet()) {
 				sb.append(entry.getKey()).append("=");
 				try {
-					sb.append(URLEncoder.encode(entry.getValue(), PostService.CODEING));
+					sb.append(URLEncoder.encode(entry.getValue(),
+							PostService.CODEING));
 				} catch (UnsupportedEncodingException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -98,40 +104,51 @@ public class VolleyHttpUtil {
 			flippingLoadingdfialog = new FlippingLoadingDialog(activity);
 			flippingLoadingdfialog.show();
 		}
-		StringRequest stringRequest = new StringRequest(Request.Method.POST, url + "&" + sb, new Listener<String>() {
+		StringRequest stringRequest = new StringRequest(Request.Method.POST,
+				url + "&" + sb, new Listener<String>() {
+
+					@Override
+					public void onResponse(String response) {
+						// TODO Auto-generated method stub
+						if (flippingLoadingdfialog != null) {
+							flippingLoadingdfialog.dismiss();
+						}
+
+						try {
+							onData(response, type);
+						} catch (Exception e) {
+							// TODO: handle exception
+							GlobalUtil.showToast(activity, Globals.MSG_WHAT_2);
+						}
+
+					}
+				}, new ErrorListener() {
+
+					@Override
+					public void onErrorResponse(VolleyError error) {
+						// TODO Auto-generated method stub
+						Log.e("$$$$$$$$$$", error + "");
+						if (flippingLoadingdfialog != null) {
+							flippingLoadingdfialog.dismiss();
+						}
+						GlobalUtil.showToast(activity, Globals.MSG_WHAT_2);
+					}
+				}) {
 
 			@Override
-			public void onResponse(String response) {
-				// TODO Auto-generated method stub
-				if (flippingLoadingdfialog != null) {
-					flippingLoadingdfialog.dismiss();
-				}
+			protected Response<String> parseNetworkResponse(
+					NetworkResponse response) {
 
 				try {
-					onData(response, type);
-				} catch (Exception e) {
-					// TODO: handle exception
-					GlobalUtil.showToast(activity, Globals.MSG_WHAT_2);
+					return Response.success(new String(response.data, "UTF-8"),
+							HttpHeaderParser.parseCacheHeaders(response));
+				} catch (UnsupportedEncodingException e) {
+					return Response.error(new ParseError(e));
+				} catch (Exception je) {
+					return Response.error(new ParseError(je));
 				}
+			}
 
-			}
-		}, new ErrorListener() {
-
-			@Override
-			public void onErrorResponse(VolleyError error) {
-				// TODO Auto-generated method stub
-				Log.e("$$$$$$$$$$", error + "");
-				if (flippingLoadingdfialog != null) {
-					flippingLoadingdfialog.dismiss();
-				}
-				GlobalUtil.showToast(activity, Globals.MSG_WHAT_2);
-			}
-		}) {
-			@Override
-			protected Map<String, String> getParams() throws AuthFailureError {
-				// TODO Auto-generated method stub
-				return Params;
-			}
 		};
 
 		requestQueue.add(stringRequest);
@@ -147,12 +164,14 @@ public class VolleyHttpUtil {
 	 * @param getjson
 	 * @throws Exception
 	 */
-	public void Login(Activity activity, String username, String password) throws Exception {
+	public void Login(Activity activity, String username, String password)
+			throws Exception {
 		Map<String, String> Params = new HashMap<String, String>();
 		Params.put("username", username);
 		Params.put("password", password);
 		Params.put("client", PostService.ANDROID);
-		getObject(activity, PostService.URL_LOGIN, Params, PostService.TYPE_LOGIN, true);
+		getObject(activity, PostService.URL_LOGIN, Params,
+				PostService.TYPE_LOGIN, true);
 	}
 
 	/**
@@ -164,16 +183,19 @@ public class VolleyHttpUtil {
 		Map<String, String> Params = new HashMap<String, String>();
 		Params.put("mobile", mobile);
 		Log.e("moblie", mobile);
-		getObject(activity, PostService.URL_SENDMSG, Params, PostService.TYPE_SENDMSG, true);
+		getObject(activity, PostService.URL_SENDMSG, Params,
+				PostService.TYPE_SENDMSG, true);
 	}
 
-	public void ThirdLogin(Activity activity, String opened, String truename, int sex, String avatar) {
+	public void ThirdLogin(Activity activity, String opened, String truename,
+			int sex, String avatar) {
 		HashMap<String, String> Params = new HashMap<String, String>();
 		Params.put("openid", opened);
 		Params.put("truename", truename);
 		Params.put("sex", String.valueOf(sex));
 		Params.put("avatar", avatar);
-		getObject(activity, PostService.THRID_LOGIN, Params, PostService.THRID_TYPE, true);
+		getObject(activity, PostService.THRID_LOGIN, Params,
+				PostService.THRID_TYPE, true);
 	}
 
 	/**
@@ -185,7 +207,8 @@ public class VolleyHttpUtil {
 	public void sendEmail(Activity activity, String email) {
 		Map<String, String> Params = new HashMap<String, String>();
 		Params.put("email", email);
-		getObject(activity, PostService.URL_SENDEMAIL, Params, PostService.TYPE_SENDEAMIL, true);
+		getObject(activity, PostService.URL_SENDEMAIL, Params,
+				PostService.TYPE_SENDEAMIL, true);
 	}
 
 	/**
@@ -196,7 +219,8 @@ public class VolleyHttpUtil {
 	 * @param strrpass
 	 * @param stremail
 	 */
-	public void MailBoxRdtData(Activity activity, String strusername, String strcode, String strrpass, String stremail, String str_refcode) {
+	public void MailBoxRdtData(Activity activity, String strusername,
+			String strcode, String strrpass, String stremail, String str_refcode) {
 		Map<String, String> Params = new HashMap<String, String>();
 		Params.put("member_truename", strusername);
 		Params.put("mobile", "");
@@ -207,7 +231,8 @@ public class VolleyHttpUtil {
 		Params.put("email", stremail);
 		Params.put("referred_code", str_refcode);
 		Params.put("client", PostService.ANDROID);
-		getObject(activity, PostService.URL_REGISTER, Params, PostService.TYPE_MOBILREGISTER, true);
+		getObject(activity, PostService.URL_REGISTER, Params,
+				PostService.TYPE_MOBILREGISTER, true);
 	}
 
 	/**
@@ -218,7 +243,8 @@ public class VolleyHttpUtil {
 	 * @param strcode
 	 * @param strrpass
 	 */
-	public void PhoneRdtData(Activity activity, String strusername, String strphone, String strcode, String strrpass, String str_refcode) {
+	public void PhoneRdtData(Activity activity, String strusername,
+			String strphone, String strcode, String strrpass, String str_refcode) {
 		Map<String, String> Params = new HashMap<String, String>();
 		Params.put("member_truename", strusername);
 		Params.put("mobile", strphone);
@@ -229,7 +255,8 @@ public class VolleyHttpUtil {
 		Params.put("email", "");
 		Params.put("referred_code", str_refcode);
 		Params.put("client", PostService.ANDROID);
-		getObject(activity, PostService.URL_REGISTER, Params, PostService.TYPE_PHONEREGISTER, true);
+		getObject(activity, PostService.URL_REGISTER, Params,
+				PostService.TYPE_PHONEREGISTER, true);
 	}
 
 	/**
@@ -242,14 +269,16 @@ public class VolleyHttpUtil {
 	 * @param parameter
 	 * @param type
 	 */
-	public void ResetPswd(Activity activity, String code, String password, String password_confirm, String parameter) {
+	public void ResetPswd(Activity activity, String code, String password,
+			String password_confirm, String parameter) {
 		Map<String, String> Params = new HashMap<String, String>();
 		Params.put("code", code);
 		Params.put("password", password);
 		Params.put("password_confirm", password_confirm);
 		Params.put("parameter", parameter);
 		Params.put("type", PostService.MOB_RESET);
-		getObject(activity, PostService.URl_RESET, Params, PostService.TYPE_RESET, true);
+		getObject(activity, PostService.URl_RESET, Params,
+				PostService.TYPE_RESET, true);
 	}
 
 	/**
@@ -260,14 +289,16 @@ public class VolleyHttpUtil {
 	 * @param password
 	 * @param password_confirm
 	 */
-	public void ResetEmail(Activity activity, String code, String password, String password_confirm, String parameter) {
+	public void ResetEmail(Activity activity, String code, String password,
+			String password_confirm, String parameter) {
 		Map<String, String> Params = new HashMap<String, String>();
 		Params.put("code", code);
 		Params.put("password", password);
 		Params.put("password_confirm", password_confirm);
 		Params.put("parameter", parameter);
 		Params.put("type", PostService.EMA_RESET);
-		getObject(activity, PostService.URl_RESET, Params, PostService.TYPE_RESET, true);
+		getObject(activity, PostService.URl_RESET, Params,
+				PostService.TYPE_RESET, true);
 	}
 
 	/**
@@ -281,9 +312,12 @@ public class VolleyHttpUtil {
 	 * @param member_truename
 	 */
 
-	public void ModPerMsg(Activity activity, Handler handler, Bitmap bitmap, int sex, String member_truename) {
-		String member_id = SharepreUtil.getStringValue(activity, Globals.MEMBERID, Globals.MEMBERID);
-		String loginkey = SharepreUtil.getStringValue(activity, Globals.LOGINKEY, Globals.LOGINKEY);
+	public void ModPerMsg(Activity activity, Handler handler, Bitmap bitmap,
+			int sex, String member_truename) {
+		String member_id = SharepreUtil.getStringValue(activity,
+				Globals.MEMBERID, Globals.MEMBERID);
+		String loginkey = SharepreUtil.getStringValue(activity,
+				Globals.LOGINKEY, Globals.LOGINKEY);
 
 		ThreadUtil thread = new ThreadUtil(handler);
 		HashMap<String, String> Params = new HashMap<String, String>();
@@ -292,11 +326,13 @@ public class VolleyHttpUtil {
 		if (bitmap == null) {
 			Params.put("avatar", "");
 		} else {
-			Params.put("avatar", StringEscapeUtils.unescapeJava(ImageTools.bitmapToBase64(bitmap)));
+			Params.put("avatar", StringEscapeUtils.unescapeJava(ImageTools
+					.bitmapToBase64(bitmap)));
 		}
 		Params.put("sex", String.valueOf(sex));
 		Params.put("truename", member_truename);
-		thread.doStartWebServicerequestWebService(activity, Params, PostService.URL_MODPER, true);
+		thread.doStartWebServicerequestWebService(activity, Params,
+				PostService.URL_MODPER, true);
 	}
 
 	/**
@@ -310,11 +346,14 @@ public class VolleyHttpUtil {
 	 */
 	public void SetMobile(Activity activity, String mobile, String code) {
 		Map<String, String> Params = new HashMap<String, String>();
-		Params.put("member_id", SharepreUtil.getStringValue(activity, Globals.MEMBERID, ""));
-		Params.put("key", SharepreUtil.getStringValue(activity, Globals.LOGINKEY, ""));
+		Params.put("member_id",
+				SharepreUtil.getStringValue(activity, Globals.MEMBERID, ""));
+		Params.put("key",
+				SharepreUtil.getStringValue(activity, Globals.LOGINKEY, ""));
 		Params.put("mobile", mobile);
 		Params.put("code", code);
-		getObject(activity, PostService.URL_MODPER, Params, PostService.MODPER, true);
+		getObject(activity, PostService.URL_MODPER, Params, PostService.MODPER,
+				true);
 	}
 
 	/**
@@ -326,11 +365,14 @@ public class VolleyHttpUtil {
 	 */
 	public void SetEmail(Activity activity, String email, String code) {
 		Map<String, String> Params = new HashMap<String, String>();
-		Params.put("member_id", SharepreUtil.getStringValue(activity, Globals.MEMBERID, ""));
-		Params.put("key", SharepreUtil.getStringValue(activity, Globals.LOGINKEY, ""));
+		Params.put("member_id",
+				SharepreUtil.getStringValue(activity, Globals.MEMBERID, ""));
+		Params.put("key",
+				SharepreUtil.getStringValue(activity, Globals.LOGINKEY, ""));
 		Params.put("email", email);
 		Params.put("code", code);
-		getObject(activity, PostService.URL_MODPER, Params, PostService.MODPER, true);
+		getObject(activity, PostService.URL_MODPER, Params, PostService.MODPER,
+				true);
 	}
 
 	/**
@@ -342,9 +384,12 @@ public class VolleyHttpUtil {
 	 */
 	public void ListAds(Activity activity) {
 		Map<String, String> Params = new HashMap<String, String>();
-		Params.put("member_id", SharepreUtil.getStringValue(activity, Globals.MEMBERID, Globals.MEMBERID));
-		Params.put("key", SharepreUtil.getStringValue(activity, Globals.LOGINKEY, Globals.LOGINKEY));
-		getObject(activity, PostService.URL_LISTADS, Params, PostService.LISTADS, true);
+		Params.put("member_id", SharepreUtil.getStringValue(activity,
+				Globals.MEMBERID, Globals.MEMBERID));
+		Params.put("key", SharepreUtil.getStringValue(activity,
+				Globals.LOGINKEY, Globals.LOGINKEY));
+		getObject(activity, PostService.URL_LISTADS, Params,
+				PostService.LISTADS, true);
 
 	}
 
@@ -357,15 +402,19 @@ public class VolleyHttpUtil {
 	 * @param tel_phone
 	 * @param mob_phone
 	 */
-	public void AddAds(Activity activity, String truename, String address, String mob_phone, String zip_code) {
+	public void AddAds(Activity activity, String truename, String address,
+			String mob_phone, String zip_code) {
 		Map<String, String> Params = new HashMap<String, String>();
-		Params.put("key", SharepreUtil.getStringValue(activity, Globals.LOGINKEY, Globals.LOGINKEY));
-		Params.put("member_id", SharepreUtil.getStringValue(activity, Globals.MEMBERID, Globals.MEMBERID));
+		Params.put("key", SharepreUtil.getStringValue(activity,
+				Globals.LOGINKEY, Globals.LOGINKEY));
+		Params.put("member_id", SharepreUtil.getStringValue(activity,
+				Globals.MEMBERID, Globals.MEMBERID));
 		Params.put("true_name", truename);
 		Params.put("address", address);
 		Params.put("mob_phone", mob_phone);
 		Params.put("zip_code", zip_code);
-		getObject(activity, PostService.URL_ADDADS, Params, PostService.ADDADS, true);
+		getObject(activity, PostService.URL_ADDADS, Params, PostService.ADDADS,
+				true);
 	}
 
 	/**
@@ -378,16 +427,20 @@ public class VolleyHttpUtil {
 	 * @param mob_phone
 	 * @param zip_code
 	 */
-	public void EditAds(Activity activity, String address_id, String true_name, String address, String mob_phone, String zip_code) {
+	public void EditAds(Activity activity, String address_id, String true_name,
+			String address, String mob_phone, String zip_code) {
 		Map<String, String> Params = new HashMap<String, String>();
-		Params.put("member_id", SharepreUtil.getStringValue(activity, Globals.MEMBERID, Globals.MEMBERID));
-		Params.put("key", SharepreUtil.getStringValue(activity, Globals.LOGINKEY, Globals.LOGINKEY));
+		Params.put("member_id", SharepreUtil.getStringValue(activity,
+				Globals.MEMBERID, Globals.MEMBERID));
+		Params.put("key", SharepreUtil.getStringValue(activity,
+				Globals.LOGINKEY, Globals.LOGINKEY));
 		Params.put("address_id", address_id);
 		Params.put("true_name", true_name);
 		Params.put("address", address);
 		Params.put("mob_phone", mob_phone);
 		Params.put("zip_code", zip_code);
-		getObject(activity, PostService.URL_EDITADS, Params, PostService.EDITADS, true);
+		getObject(activity, PostService.URL_EDITADS, Params,
+				PostService.EDITADS, true);
 	}
 
 	/**
@@ -398,10 +451,13 @@ public class VolleyHttpUtil {
 	 */
 	public void DelAds(Activity activity, String address_id) {
 		Map<String, String> Params = new HashMap<String, String>();
-		Params.put("member_id", SharepreUtil.getStringValue(activity, Globals.MEMBERID, Globals.MEMBERID));
-		Params.put("key", SharepreUtil.getStringValue(activity, Globals.LOGINKEY, Globals.LOGINKEY));
+		Params.put("member_id", SharepreUtil.getStringValue(activity,
+				Globals.MEMBERID, Globals.MEMBERID));
+		Params.put("key", SharepreUtil.getStringValue(activity,
+				Globals.LOGINKEY, Globals.LOGINKEY));
 		Params.put("address_id", address_id);
-		getObject(activity, PostService.URL_DELADS, Params, PostService.DELADS, true);
+		getObject(activity, PostService.URL_DELADS, Params, PostService.DELADS,
+				true);
 	}
 
 	/**
@@ -412,10 +468,13 @@ public class VolleyHttpUtil {
 	 */
 	public void DefAds(Activity activity, String address_id) {
 		Map<String, String> Params = new HashMap<String, String>();
-		Params.put("member_id", SharepreUtil.getStringValue(activity, Globals.MEMBERID, Globals.MEMBERID));
-		Params.put("key", SharepreUtil.getStringValue(activity, Globals.LOGINKEY, Globals.LOGINKEY));
+		Params.put("member_id", SharepreUtil.getStringValue(activity,
+				Globals.MEMBERID, Globals.MEMBERID));
+		Params.put("key", SharepreUtil.getStringValue(activity,
+				Globals.LOGINKEY, Globals.LOGINKEY));
 		Params.put("address_id", address_id);
-		getObject(activity, PostService.URL_DEFADS, Params, PostService.DEFADS, true);
+		getObject(activity, PostService.URL_DEFADS, Params, PostService.DEFADS,
+				true);
 	}
 
 	/**
@@ -426,16 +485,19 @@ public class VolleyHttpUtil {
 	 * @param curpage
 	 * @param eachNum
 	 */
-	public void UserInfoRed(Activity activity, String member_id, String key, int curpage, boolean metdel) {
+	public void UserInfoRed(Activity activity, String member_id, String key,
+			int curpage, boolean metdel) {
 		Map<String, String> Params = new HashMap<String, String>();
 		Params.put(Globals.LOGINKEY, key);
 		Params.put("member_id", member_id);
 		Params.put("curpage", String.valueOf(curpage));
 		Params.put("eachNum", PostService.CURPAGE);
 		if (metdel) {
-			getObject(activity, PostService.URL_PERINFO, Params, PostService.USERRECROD, true);
+			getObject(activity, PostService.URL_PERINFO, Params,
+					PostService.USERRECROD, true);
 		} else {
-			getObject(activity, PostService.URL_PERINFO, Params, PostService.USERRECROD, false);
+			getObject(activity, PostService.URL_PERINFO, Params,
+					PostService.USERRECROD, false);
 		}
 
 	}
@@ -450,14 +512,17 @@ public class VolleyHttpUtil {
 		Map<String, String> Params = new HashMap<String, String>();
 		Params.put(Globals.LOGINKEY, key);
 		Params.put("feedbook", feedboox);
-		getObject(activity, PostService.URL_FEEDBACK_ADD, Params, PostService.TYPE_MOBILREGISTER, true);
+		getObject(activity, PostService.URL_FEEDBACK_ADD, Params,
+				PostService.TYPE_MOBILREGISTER, true);
 	}
 
 	/**
 	 * 检查更新
 	 */
 	public void UpMsgData(Activity activity) {
-		getObject(activity, PostService.URL_VERSION_UPDATE, new HashMap<String, String>(), PostService.TYPE_VERSION_UPDATE, false);
+		getObject(activity, PostService.URL_VERSION_UPDATE,
+				new HashMap<String, String>(), PostService.TYPE_VERSION_UPDATE,
+				false);
 	}
 
 	/**
@@ -474,16 +539,20 @@ public class VolleyHttpUtil {
 	 * @param key
 	 *            登录KEY
 	 */
-	public void ListProducts(Activity activity, String type, String eachNum, String curpage, Boolean flag) {
+	public void ListProducts(Activity activity, String type, String eachNum,
+			String curpage, Boolean flag) {
 		Map<String, String> par = new HashMap<String, String>();
 		par.put("type", type);
 		par.put("eachNum", eachNum);
 		par.put("curpage", curpage);
-		String member_id = SharepreUtil.getStringValue(activity, Globals.MEMBERID, "0");
-		String key = SharepreUtil.getStringValue(activity, Globals.LOGINKEY, "-1");
+		String member_id = SharepreUtil.getStringValue(activity,
+				Globals.MEMBERID, "0");
+		String key = SharepreUtil.getStringValue(activity, Globals.LOGINKEY,
+				"-1");
 		par.put("member_id", member_id);
 		par.put("key", key);
-		getObject(activity, PostService.URL_CONTEXTPATH + "act=try&op=list", par, PostService.TYPE_LISTPRODUCTS, flag);
+		getObject(activity, PostService.URL_CONTEXTPATH + "act=try&op=list",
+				par, PostService.TYPE_LISTPRODUCTS, flag);
 		Log.e("uuuuuuuuu", PostService.URL_CONTEXTPATH + "act=try&op=list");
 	}
 
@@ -498,7 +567,9 @@ public class VolleyHttpUtil {
 		Params.put("tryId", pro_id);
 		Params.put("curpage", "1");
 		Params.put("eachNum", eachNum);
-		getObject(activity, PostService.URL_CONTEXTPATH + "act=try&op=getComment", Params, PostService.TYPE_GETPINGLUN, false);
+		getObject(activity, PostService.URL_CONTEXTPATH
+				+ "act=try&op=getComment", Params, PostService.TYPE_GETPINGLUN,
+				false);
 	}
 
 	/**
@@ -507,13 +578,15 @@ public class VolleyHttpUtil {
 	 * @param pro_id
 	 *            要得到评论的产品
 	 */
-	public void GetPingLun_s(Activity activity, String pro_id, String eachNum, Handler handler) {
+	public void GetPingLun_s(Activity activity, String pro_id, String eachNum,
+			Handler handler) {
 		ThreadUtil thread = new ThreadUtil(handler);
 		HashMap<String, String> params = new HashMap<String, String>();
 		params.put("tryId", pro_id);
 		params.put("curpage", "1");
 		params.put("eachNum", eachNum);
-		thread.doStartWebServicerequestWebService(activity, params, PostService.URL_CONTEXTPATH + "act=try&op=getComment", true);
+		thread.doStartWebServicerequestWebService(activity, params,
+				PostService.URL_CONTEXTPATH + "act=try&op=getComment", true);
 	}
 
 	/**
@@ -527,7 +600,8 @@ public class VolleyHttpUtil {
 		Params.put("tryId", tryId);
 		Params.put("curpage", "1");
 		Params.put("eachNum", eachNum);
-		getObject(activity, PostService.URL_GETSHIYONGBAOGAO, Params, PostService.TYPE_GETSHIYONGBAOGAO, true);
+		getObject(activity, PostService.URL_GETSHIYONGBAOGAO, Params,
+				PostService.TYPE_GETSHIYONGBAOGAO, true);
 	}
 
 	/**
@@ -541,7 +615,9 @@ public class VolleyHttpUtil {
 		params.put("try_id", tryId);
 		params.put("curpage", "1");
 		params.put("eachNum", "1000");
-		getObject(activity, PostService.URL_CONTEXTPATH + "act=try&op=getWinning", params, PostService.TYPE_GETZHONGJIANGMINGDAN, false);
+		getObject(activity, PostService.URL_CONTEXTPATH
+				+ "act=try&op=getWinning", params,
+				PostService.TYPE_GETZHONGJIANGMINGDAN, false);
 	}
 
 	/**
@@ -557,12 +633,15 @@ public class VolleyHttpUtil {
 	public void GiveComment(Activity activity, String content, String try_id) {
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("content", content);
-		String member_id = SharepreUtil.getStringValue(activity, Globals.MEMBERID, "0");
-		String key = SharepreUtil.getStringValue(activity, Globals.LOGINKEY, "-1");
+		String member_id = SharepreUtil.getStringValue(activity,
+				Globals.MEMBERID, "0");
+		String key = SharepreUtil.getStringValue(activity, Globals.LOGINKEY,
+				"-1");
 		params.put("member_id", member_id);
 		params.put("key", key);
 		params.put("try_id", try_id);
-		getObject(activity, PostService.URL_ADDCOMMENT, params, PostService.TYPE_ADDCOMMENT, true);
+		getObject(activity, PostService.URL_ADDCOMMENT, params,
+				PostService.TYPE_ADDCOMMENT, true);
 	}
 
 	/**
@@ -584,14 +663,17 @@ public class VolleyHttpUtil {
 		}
 		String versionName = info.versionName;
 		Map<String, String> params = new HashMap<String, String>();
-		String member_id = SharepreUtil.getStringValue(activity, Globals.MEMBERID, "0");
-		String key = SharepreUtil.getStringValue(activity, Globals.LOGINKEY, "-1");
+		String member_id = SharepreUtil.getStringValue(activity,
+				Globals.MEMBERID, "0");
+		String key = SharepreUtil.getStringValue(activity, Globals.LOGINKEY,
+				"-1");
 		params.put("member_id", member_id);
 		params.put("key", key);
 		params.put("try_id", try_id);
 		params.put("version", versionName);
 		params.put("client", "android");
-		getObject(activity, PostService.URL_APPLYTRY, params, PostService.TYPE_APPLEYTRY, false);
+		getObject(activity, PostService.URL_APPLYTRY, params,
+				PostService.TYPE_APPLEYTRY, false);
 	}
 
 	/**
@@ -608,10 +690,14 @@ public class VolleyHttpUtil {
 	 * @param zip_code
 	 *            用户居住地邮编
 	 */
-	public void SurePlace(Activity activity, String try_id, String name, String phone, String address, String zip_code, String type, String by) {
+	public void SurePlace(Activity activity, String try_id, String name,
+			String phone, String address, String zip_code, String type,
+			String by) {
 		Map<String, String> params = new HashMap<String, String>();
-		String member_id = SharepreUtil.getStringValue(activity, Globals.MEMBERID, "0");
-		String key = SharepreUtil.getStringValue(activity, Globals.LOGINKEY, "-1");
+		String member_id = SharepreUtil.getStringValue(activity,
+				Globals.MEMBERID, "0");
+		String key = SharepreUtil.getStringValue(activity, Globals.LOGINKEY,
+				"-1");
 		params.put("member_id", member_id);
 		params.put("key", key);
 		params.put("id", try_id);
@@ -621,7 +707,8 @@ public class VolleyHttpUtil {
 		params.put("zip_code", zip_code);
 		params.put("car_name", type);
 		params.put("other", by);
-		getObject(activity, PostService.URL_SURESPLACE, params, PostService.TYPE_SURESPLACE, false);
+		getObject(activity, PostService.URL_SURESPLACE, params,
+				PostService.TYPE_SURESPLACE, false);
 	}
 
 	/**
@@ -644,11 +731,15 @@ public class VolleyHttpUtil {
 	 * @param img
 	 *            用户上传产品图片
 	 */
-	public void GiveShiYongBaoGao(Activity activity, String try_id, String appearance_info, String score, String quality_info, String price_info, Bitmap bitmap, Handler handler) {
+	public void GiveShiYongBaoGao(Activity activity, String try_id,
+			String appearance_info, String score, String quality_info,
+			String price_info, Bitmap bitmap, Handler handler) {
 		ThreadUtil thread = new ThreadUtil(handler);
 		HashMap<String, String> params = new HashMap<String, String>();
-		String member_id = SharepreUtil.getStringValue(activity, Globals.MEMBERID, "0");
-		String key = SharepreUtil.getStringValue(activity, Globals.LOGINKEY, "-1");
+		String member_id = SharepreUtil.getStringValue(activity,
+				Globals.MEMBERID, "0");
+		String key = SharepreUtil.getStringValue(activity, Globals.LOGINKEY,
+				"-1");
 		params.put("member_id", member_id);
 		params.put("key", key);
 		params.put("try_id", try_id);
@@ -656,8 +747,10 @@ public class VolleyHttpUtil {
 		params.put("score", score);
 		params.put("quality_info", quality_info);
 		params.put("price_info", price_info);
-		params.put("img", StringEscapeUtils.unescapeJava(ImageTools.bitmapToBase64(bitmap)));
-		thread.doStartWebServicerequestWebService(activity, params, PostService.URL_ADDREPORT, true);
+		params.put("img", StringEscapeUtils.unescapeJava(ImageTools
+				.bitmapToBase64(bitmap)));
+		thread.doStartWebServicerequestWebService(activity, params,
+				PostService.URL_ADDREPORT, true);
 	}
 
 	/**
@@ -669,7 +762,8 @@ public class VolleyHttpUtil {
 	public void GetProInfo(Activity activity, String id) {
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("id", id);
-		getObject(activity, PostService.URL_PRODUCTINFO, params, PostService.TYPE_PRODUCTINFO, false);
+		getObject(activity, PostService.URL_PRODUCTINFO, params,
+				PostService.TYPE_PRODUCTINFO, false);
 	}
 
 }
